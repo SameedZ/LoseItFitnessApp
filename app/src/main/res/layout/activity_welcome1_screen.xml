@@ -7,7 +7,7 @@
     android:background="@drawable/welcome2screenbg"
     android:orientation="vertical"
     tools:context=".Welcome1Screen">
-
+`
 
     <ImageView
         android:id="@+id/imageView"
