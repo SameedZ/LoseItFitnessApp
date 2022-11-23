@@ -71,7 +71,7 @@
             android:textSize="16dp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/et_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/inputstyle_email"
@@ -138,7 +138,6 @@
         android:orientation="vertical">
 
 
-
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_login"
             android:layout_width="match_parent"
@@ -146,7 +145,8 @@
             android:layout_gravity="center"
             android:background="#B0C929"
             android:fontFamily="@font/dmsans_bold"
-            android:text="LOGIN"
+            android:textColor="@color/white"
+            android:onClick="Login"
             android:textStyle="bold"
 
 
