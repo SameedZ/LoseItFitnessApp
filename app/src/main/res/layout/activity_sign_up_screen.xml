@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    >
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/white"
     android:paddingHorizontal="40dp"
-    tools:context=".LoginScreen">
+
+    tools:context=".SignUpScreen">
 
     <ImageView
         android:id="@+id/iv_backarrow"
@@ -34,7 +40,7 @@
             android:id="@+id/tv_heading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Welcome to Pro Fitness!"
+            android:text="Create Accounts"
             android:fontFamily="@font/bebasneue_regular"
             android:textSize="30dp"
             android:textColor="#000000"
@@ -45,7 +51,7 @@
             android:id="@+id/tv_hellothere"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hello there, sign in to continue!"
+            android:text="Please enter your credentials to proceed"
             android:fontFamily="@font/dmsans_medium"
             android:textSize="15dp"
             android:textColor="#3A4750"
@@ -58,6 +64,57 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/welcomemsg"
         android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_fullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Full Name"
+            android:textColor="#3A4750"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/et_fullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/inputstyle_email"
+            android:ems="10"
+            android:fontFamily="@font/montserrat_medium"
+            android:inputType="textPersonName"
+            android:paddingLeft="20dp"
+            android:hint="Sameed Zahoor"
+            android:textColor="#303841"
+            android:textSize="14dp"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Full Name"
+            android:textColor="#3A4750"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/inputstyle_email"
+            android:ems="10"
+            android:fontFamily="@font/montserrat_medium"
+            android:inputType="phone"
+            android:paddingLeft="20dp"
+            android:hint="923154172134"
+            android:textColor="#303841"
+            android:textSize="14dp"
+
+            />
+
 
 
         <TextView
@@ -108,30 +165,20 @@
 
             android:paddingLeft="20dp"
             android:password="true"
-            android:text="12345"
+            android:text="12313"
             android:textColor="#303841"
             android:textSize="28dp"
             android:textStyle="bold"
 
             />
 
-        <TextView
-            android:id="@+id/tv_forgotpassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:fontFamily="@font/montserrat_medium"
-            android:text="Forgot password ?"
-            android:textAlignment="textEnd"
-            android:textColor="#3A4750"
-            android:textSize="16dp"
-            android:textStyle="bold" />
+
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/loginfields"
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/inputfields"
@@ -146,9 +193,9 @@
             android:background="#B0C929"
             android:fontFamily="@font/dmsans_bold"
             android:textColor="@color/white"
-            android:text="Login"
+            android:text="CREATE ACCOUNT"
             android:textStyle="bold"
-            android:onClick="Login"
+
 
             />
 
@@ -160,9 +207,8 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/montserrat_medium"
-            android:text="Or Login with"
+            android:text="Or Register with"
             android:textAlignment="center"
-
             android:textColor="#3A4750"
             android:textSize="14dp" />
 
@@ -200,15 +246,20 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat_medium"
             android:layout_marginTop="10dp"
-            android:text="Don’t have an account? Register!"
+            android:text="Already have an account? Login!"
             android:textAlignment="center"
-            android:onClick="navigatetosignuppage"
+            android:onClick="navigatetologinpage"
             android:textColor="#3A4750"
-            android:textSize="14dp" />
+            android:textSize="14dp"
+            android:layout_marginBottom="50dp"
+
+            />
 
 
 
     </LinearLayout>
 
-
 </RelativeLayout>
+
+
+</ScrollView>
