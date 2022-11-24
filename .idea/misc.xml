@@ -3,8 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/drawable/bottommenu_bg.xml" value="0.1725" />
         <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/drawable/splashscreenbg.xml" value="0.1505" />
-        <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_home_screen.xml" value="0.2" />
+        <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_home_screen.xml" value="0.4" />
         <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_login_screen.xml" value="0.264" />
         <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_sign_up_screen.xml" value="0.152" />
