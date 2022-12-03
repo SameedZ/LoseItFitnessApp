@@ -19,10 +19,7 @@
         android:name=".ApplicationClass"
         tools:targetApi="31">
 
-
-
         <activity
-
             android:name=".EditProfile"
             android:exported="false" />
         <activity
@@ -31,37 +28,6 @@
         <activity
             android:name=".Dashboard"
             android:exported="false" />
-        <activity
-            android:name=".NewWorkoutAdd"
-            android:exported="false" />
-        <activity
-            android:name=".Filters"
-            android:exported="false" />
-        <activity
-            android:name=".Category"
-            android:exported="false" />
-        <activity
-            android:name=".getstarted"
-            android:exported="false" />
-        <activity
-            android:name=".goal"
-            android:exported="false" />
-        <activity
-            android:name=".Level"
-            android:exported="false" />
-        <activity
-            android:name=".height"
-            android:exported="false" />
-        <activity
-            android:name=".weightgoal"
-            android:exported="false" />
-        <activity
-            android:name=".Weight"
-            android:exported="false" />
-        <activity
-            android:name=".SelectFavorite"
-            android:exported="false" />
-
         <activity
             android:name=".NewWorkoutAdd"
             android:exported="false" />

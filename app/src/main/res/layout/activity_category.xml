@@ -47,22 +47,6 @@
         tools:layout_editor_absoluteY="65dp">
 
 
-        <EditText
-            android:id="@+id/et_fullname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/inputstyle_email"
-            android:drawableLeft="@drawable/searchicon"
-            android:ems="10"
-            android:fontFamily="@font/montserrat_medium"
-            android:hint="Search"
-            android:inputType="textPersonName"
-            android:paddingLeft="20dp"
-            android:textColor="#000000"
-            android:textColorHint="000000"
-            android:textSize="14dp"
-
-            />
 
     </LinearLayout>
 
