@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.loseit_androidapp">
+    package="com.example.loseit_androidapp" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -30,6 +30,17 @@
         <activity
             android:name=".Profile"
             android:exported="false" />
+
+        <activity
+            android:name=".Result"
+            android:exported="false" />
+        <activity
+            android:name=".BottomNavigationBar"
+            android:exported="false" /> 
+        <activity
+            android:name=".AddNewWorkout"
+            android:exported="false" /> 
+
         <activity
             android:name=".EditProfile"
             android:exported="false" />
@@ -85,6 +96,8 @@
             android:name=".Welcome1Screen"
             android:exported="false" />
         <activity
+            android:name=".Exercises"
+            android:exported="true" >
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

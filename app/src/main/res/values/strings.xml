@@ -1,5 +1,36 @@
 <resources>
     <string name="app_name">Loseit_androidapp</string>
+    <
+    <
+    <
+    <
+    <
+    <
+    < HEAD
+    <string name="new_workout">New Workout</string>
+    <string name="workout_name">Workout Name</string>
+    <string name="choose_fitness_level">Choose Fitness Level</string>
+    <string name="workout_name1">Workout name</string>
+    <string name="beginner">Beginner</string>
+    <string name="intermidate">intermidate</string>
+    <string name="intermedate">intermedate</string>
+    <string name="advance">advance</string>
+    <string name="full_exercise">Full Exercise</string>
+    <string name="cardio">cardio</string>
+    <string name="cardio_ex">Cardio</string>
+    <string name="legs">Legs</string>
+    <string name="back">Back</string>
+    <string name="chest">chest</string>
+    <string name="_110_kcal">110 kcal</string>
+    <string name="exercise_with_jumping_rope">Exercise with Jumping Rope</string>
+    <string name="differ">|</string>
+    <string name="_10_min">10 min</string>
+    <string name="beginner_plan">Beginner</string>
+    <string name="meal_plans">Meal Plans</string>
+    <string name="home">Home</string>
+    <string name="exercise">Exercise</string>
+    <string name="profile">Profile</string>
+    =======
     <string name="title_activity_side_menu">Side_menu</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -11,4 +42,20 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="workout">Workout</string>
+    <string name="exercise_with_sitting_dumbells">Exercise with sitting Dumbells</string>
+    <string name="_24_02_2022">24/02/2022</string>
+    <string name="completed_on">Completed on</string>
+    <string name="_3">3</string>
+    <string name="_12">/12</string>
+    <string name="total_time">Total time</string>
+    <string name="_00_45_min">00:45 min</string>
+    <string name="total_calories">Total calories</string>
+    <string name="_120_kcal">120 kcal</string>
+    <string name="total_weight">Total weight</string>
+    <string name="_59kg">59kg</string>
+    <string name="heart_rate">Heart rate</string>
+    <string name="_115_bpm">115 bpm</string>
+    <string name="save">Save</string>
+    >>>>>>> 0b969fd05f6fb046d067860f118a182e89211f82
 </resources>

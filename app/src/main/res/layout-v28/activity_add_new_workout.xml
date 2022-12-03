@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNewWorkout"
+    android:orientation="vertical">
+
+    <!-- HEADER  -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="ltr"
+        >
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/back"
+            android:padding="20dp"
+            tools:layout_editor_absoluteX="34dp"
+            tools:layout_editor_absoluteY="51dp" />
+
+        <TextView
+            android:id="@+id/workoutHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/new_workout"
+            android:fontFamily="@font/bebasneue_regular"
+            android:padding="10dp"
+            android:textSize="30sp"
+            android:textColor="#000000"
+            android:layout_gravity="center"
+            android:layout_marginStart="80dp"
+            />
+
+    </LinearLayout>
+
+    <!-- BODY -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        >
+        <TextView
+            android:id="@+id/headingWorkoutName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/workout_name"
+            android:textColor="#3A4750"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/workoutNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/inputstyle_email"
+            android:ems="10"
+            android:fontFamily="@font/montserrat_medium"
+            android:inputType="textPersonName"
+            android:paddingStart="20dp"
+            android:hint="@string/workout_name1"
+            android:textColor="#303841"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/headingFitnessLvl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/choose_fitness_level"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/beginnerBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#070707"
+            android:fontFamily="@font/dmsans_bold"
+            android:textColor="@color/white"
+            android:text="@string/beginner"
+            android:textStyle="bold"
+            android:layout_margin="5dp"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/intermediateBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#B0C929"
+            android:fontFamily="@font/dmsans_bold"
+            android:textColor="@color/white"
+            android:text="@string/intermedate"
+            android:textStyle="bold"
+            android:layout_margin="5dp"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/advanceBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#ffff"
+            android:outlineAmbientShadowColor="@color/black"
+            android:fontFamily="@font/dmsans_bold"
+            android:textColor="@color/black"
+            android:text="@string/advance"
+            android:textStyle="bold"
+
+
+            />
+
+    </LinearLayout>
+</LinearLayout>

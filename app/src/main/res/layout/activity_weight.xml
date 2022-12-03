@@ -74,8 +74,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/favouritecate"
-        android:layout_marginTop="30dp"
         android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
         android:orientation="vertical">
 
         <ImageView
@@ -84,33 +84,35 @@
             android:src="@drawable/weightinput">
 
         </ImageView>
+
         <EditText
             android:id="@+id/et_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
             android:background="@drawable/inputstyle_email"
             android:ems="10"
             android:fontFamily="@font/montserrat_medium"
-            android:inputType="number"
-            android:layout_marginTop="30dp"
-            android:paddingLeft="20dp"
             android:hint="|kg"
-            android:textColorHint="#000000"
+            android:inputType="number"
+            android:paddingLeft="20dp"
             android:textAlignment="center"
             android:textColor="#000000"
+            android:textColorHint="#000000"
             android:textSize="14dp"
 
             />
 
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/loginfields"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/weightinput"
 
-        android:orientation="vertical"
-        android:layout_marginTop="80dp">
+        android:layout_marginTop="80dp"
+        android:orientation="vertical">
 
 
         <androidx.appcompat.widget.AppCompatButton
@@ -120,8 +122,8 @@
             android:layout_gravity="center"
             android:background="#B0C929"
             android:fontFamily="@font/dmsans_bold"
-            android:textColor="@color/white"
             android:text="Next Steps"
+            android:textColor="@color/white"
             android:textSize="18dp"
             android:textStyle="bold"
 
