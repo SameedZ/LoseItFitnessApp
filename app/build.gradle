@@ -37,8 +37,8 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
-    implementation 'androidx.navigation:navigation-fragment:2.3.5'
-    implementation 'androidx.navigation:navigation-ui:2.3.5'
+    implementation 'androidx.navigation:navigation-fragment:2.5.3'
+    implementation 'androidx.navigation:navigation-ui:2.5.3'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
@@ -46,10 +46,8 @@ dependencies {
     // circular images
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
-<<<<<<< HEAD
 
-=======
     // one signal
     implementation 'com.onesignal:OneSignal:[4.0.0, 4.99.99]'
->>>>>>> 0b969fd05f6fb046d067860f118a182e89211f82
+//>>>>>>> 0b969fd05f6fb046d067860f118a182e89211f82
 }
