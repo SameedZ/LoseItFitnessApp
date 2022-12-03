@@ -3,6 +3,27 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout-v28/activity_add_new_workout.xml" value="0.22395833333333334" />
+        <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_add_new_workout.xml" value="0.225" />
+        <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_bottom_navigation_bar.xml" value="0.18" />
+        <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_category.xml" value="0.225" />
+        <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_exercises.xml" value="0.22" />
+        <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_getstarted.xml" value="0.225" />
+        <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_goal.xml" value="0.225" />
+        <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_height.xml" value="0.225" />
+        <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_home_screen.xml" value="0.225" />
+        <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_level.xml" value="0.225" />
+        <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_login_screen.xml" value="0.225" />
+        <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_main.xml" value="0.225" />
+        <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_select_favorite.xml" value="0.225" />
+        <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_sign_up_screen.xml" value="0.225" />
+        <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_weight.xml" value="0.225" />
+        <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_weightgoal.xml" value="0.225" />
+        <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_welcome1_screen.xml" value="0.225" />
+        <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_welcome2_screen.xml" value="0.225" />
+        <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_welcome3_screen.xml" value="0.225" />
+        <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/rv_exercises.xml" value="0.25" />
+        <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/menu/nav_menu.xml" value="0.225" />
         <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/drawable/bottommenu_bg.xml" value="0.1725" />
         <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/drawable/splashscreenbg.xml" value="0.1505" />
         <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_home_screen.xml" value="0.19837537409149208" />

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FCFCFC"
+    tools:context=".Exercises">
+
+
+
+    <!-- CARDS   -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:padding="10dp"
+
+            >
+
+            <ImageView
+                android:id="@+id/exerciseLogo1"
+                android:layout_width="91dp"
+                android:layout_height="91dp"
+                android:src="@drawable/card1_ex" />
+
+            <TextView
+                android:id="@+id/exerciseTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@id/exerciseLogo1"
+                android:fontFamily="@font/dmsans_medium"
+                android:text="@string/exercise_with_jumping_rope"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/calorieBurnLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/exerciseTitle"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_toEndOf="@id/exerciseLogo1"
+                android:src="@drawable/logo_calories_burn" />
+
+            <TextView
+                android:id="@+id/calories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="36dp"
+                android:layout_toEndOf="@id/calorieBurnLogo"
+                android:fontFamily="@font/dmsans_medium"
+                android:text="@string/_110_kcal"
+                android:textColor="#3A4750"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/breakLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:fontFamily="@font/dmsans_medium"
+                android:layout_marginTop="35dp"
+                android:textSize="11sp"
+                android:layout_toEndOf="@id/calories"
+                android:text="@string/differ" />
+
+            <ImageView
+                android:id="@+id/clockLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/clock_logo"
+                android:layout_below="@id/exerciseTitle"
+                android:layout_toEndOf="@id/breakLine"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                />
+            <ImageView
+                android:id="@+id/clockLogoPins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/clock_pins"
+                android:layout_below="@id/exerciseTitle"
+                android:layout_toEndOf="@id/breakLine"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="16dp"
+                />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="36dp"
+                android:layout_toEndOf="@id/clockLogo"
+                android:fontFamily="@font/dmsans_medium"
+                android:textColor="#3A4750"
+                android:text="@string/_10_min"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/exercisePlan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/calorieBurnLogo"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_toEndOf="@id/exerciseLogo1"
+                android:fontFamily="@font/dmsans_medium"
+                android:text="@string/beginner_plan"
+                android:textSize="11sp"
+                android:textColor="#3A4750"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- LINE BREAK   -->
+
+    <View
+        android:layout_width="300dp"
+        android:layout_height="1dp"
+        android:background="#D1D4D6"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        />
+
+</LinearLayout>

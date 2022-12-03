@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">Loseit_androidapp</string>
+    <string name="new_workout">New Workout</string>
+    <string name="workout_name">Workout Name</string>
+    <string name="choose_fitness_level">Choose Fitness Level</string>
+    <string name="workout_name1">Workout name</string>
+    <string name="beginner">Beginner</string>
+    <string name="intermidate">intermidate</string>
+    <string name="intermedate">intermedate</string>
+    <string name="advance">advance</string>
+    <string name="full_exercise">Full Exercise</string>
+    <string name="cardio">cardio</string>
+    <string name="cardio_ex">Cardio</string>
+    <string name="legs">Legs</string>
+    <string name="back">Back</string>
+    <string name="chest">chest</string>
+    <string name="_110_kcal">110 kcal</string>
+    <string name="exercise_with_jumping_rope">Exercise with Jumping Rope</string>
+    <string name="differ">|</string>
+    <string name="_10_min">10 min</string>
+    <string name="beginner_plan">Beginner</string>
+    <string name="meal_plans">Meal Plans</string>
+    <string name="home">Home</string>
+    <string name="exercise">Exercise</string>
+    <string name="profile">Profile</string>
 </resources>
