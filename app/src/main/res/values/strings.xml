@@ -57,5 +57,7 @@
     <string name="heart_rate">Heart rate</string>
     <string name="_115_bpm">115 bpm</string>
     <string name="save">Save</string>
+    <string name="stretching_workout_length">Stretching workout length</string>
+    <string name="up_next">up next</string>
     >>>>>>> 0b969fd05f6fb046d067860f118a182e89211f82
 </resources>
