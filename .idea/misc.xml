@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/drawable/bottommenu_bg.xml" value="0.1" />
         <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout-v28/activity_add_new_workout.xml" value="0.22395833333333334" />
         <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_add_new_workout.xml" value="0.225" />
         <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_bottom_navigation_bar.xml" value="0.18" />
@@ -19,6 +20,7 @@
         <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_result.xml" value="0.225" />
         <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_select_favorite.xml" value="0.225" />
         <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_sign_up_screen.xml" value="0.225" />
+        <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_start_training.xml" value="0.225" />
         <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_training.xml" value="0.225" />
         <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_weight.xml" value="0.225" />
         <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_weightgoal.xml" value="0.225" />
