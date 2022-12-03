@@ -1,9 +1,483 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Filters">
+    android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:paddingHorizontal="20dp"
+            tools:context=".Filters">
+
+            <LinearLayout
+                android:id="@+id/backskipbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="34dp"
+                tools:layout_editor_absoluteY="51dp">
+
+                <ImageView
+                    android:id="@+id/iv_backarrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/back" />
+
+                <TextView
+                    android:id="@+id/tv_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/bebasneue_regular"
+                    android:text="Filters Plan"
+                    android:textColor="#000000"
+                    android:textSize="30dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Clear All"
+                    android:textAlignment="textEnd"
+                    android:textColor="#303841"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/filtercate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/backskipbar"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Categories"
+                    android:textColor="#191919"
+                    android:fontFamily="@font/bebasneue_regular"
+                    android:textSize="20dp">
+
+                </TextView>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#ededed"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="All"
+                        android:textColor="#191919"
+                        android:textSize="11dp"
+                        android:textStyle="bold"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#ededed"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="Cardio"
+                        android:textColor="#191919"
+                        android:textSize="11dp"
+                        android:textStyle="bold"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#ededed"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="Warm-Up"
+                        android:textColor="#191919"
+                        android:textSize="11dp"
+                        android:textStyle="bold"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#ededed"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="Running"
+                        android:textColor="#191919"
+                        android:textSize="11dp"
+                        android:textStyle="bold"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#ededed"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="Yoga"
+                        android:textColor="#191919"
+                        android:textSize="11dp"
+                        android:textStyle="bold"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#ededed"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="Stretching"
+                        android:textColor="#191919"
+                        android:textSize="11dp"
+                        android:textStyle="bold"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#ededed"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="Stretch"
+                        android:textColor="#191919"
+                        android:textSize="11dp"
+                        android:textStyle="bold"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#ededed"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="Arms"
+                        android:textColor="#191919"
+                        android:textSize="11dp"
+                        android:textStyle="bold"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#ededed"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="Boxing"
+                        android:textColor="#191919"
+                        android:textSize="11dp"
+                        android:textStyle="bold"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/filterexcercise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/filtercate"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Exercise"
+                    android:textColor="#191919"
+                    android:fontFamily="@font/bebasneue_regular"
+                    android:textSize="20dp">
+
+                </TextView>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#ededed"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="All"
+                        android:textColor="#191919"
+                        android:textSize="11dp"
+                        android:textStyle="bold"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#ededed"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="biceps"
+                        android:textColor="#191919"
+                        android:textSize="11dp"
+                        android:textStyle="bold"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#ededed"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="back"
+                        android:textColor="#191919"
+                        android:textSize="11dp"
+                        android:textStyle="bold"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#ededed"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="Shoulders"
+                        android:textColor="#191919"
+                        android:textSize="11dp"
+                        android:textStyle="bold"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#ededed"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="Triceps"
+                        android:textColor="#191919"
+                        android:textSize="11dp"
+                        android:textStyle="bold"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#ededed"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="Legs"
+                        android:textColor="#191919"
+                        android:textSize="11dp"
+                        android:textStyle="bold"
+                        />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/filterlevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/filterexcercise"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Level"
+                    android:textColor="#191919"
+                    android:fontFamily="@font/bebasneue_regular"
+                    android:textSize="20dp">
+
+                </TextView>
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#ededed"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="Beginner"
+                        android:textColor="#191919"
+                        android:textSize="11dp"
+                        android:textStyle="bold"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#ededed"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="Average"
+                        android:textColor="#191919"
+                        android:textSize="11dp"
+                        android:textStyle="bold"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#ededed"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="Hard"
+                        android:textColor="#191919"
+                        android:textSize="11dp"
+                        android:textStyle="bold"
+                        />
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/filtermeal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/filterlevel"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Meal"
+                    android:textColor="#191919"
+                    android:fontFamily="@font/bebasneue_regular"
+                    android:textSize="20dp">
+
+                </TextView>
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#ededed"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="Breakfast"
+                        android:textColor="#191919"
+                        android:textSize="11dp"
+                        android:textStyle="bold"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#ededed"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="Lunch"
+                        android:textColor="#191919"
+                        android:textSize="11dp"
+                        android:textStyle="bold"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#ededed"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="Dinner"
+                        android:textColor="#191919"
+                        android:textSize="11dp"
+                        android:textStyle="bold"
+                        />
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/filtertime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/filtermeal"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="time"
+                    android:textColor="#191919"
+                    android:fontFamily="@font/bebasneue_regular"
+                    android:textSize="20dp">
+
+                </TextView>
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#ededed"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="10-15 min"
+                        android:textColor="#191919"
+                        android:textSize="11dp"
+                        android:textStyle="bold"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#ededed"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="15-30 Min"
+                        android:textColor="#191919"
+                        android:textSize="11dp"
+                        android:textStyle="bold"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#ededed"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="30-45 min"
+                        android:textColor="#191919"
+                        android:textSize="11dp"
+                        android:textStyle="bold"
+                        />
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/loginfields"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/filtertime"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp">
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/nextbutton1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#B0C929"
+                    android:fontFamily="@font/dmsans_bold"
+                    android:textColor="@color/white"
+                    android:text="apply filters"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+
+
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

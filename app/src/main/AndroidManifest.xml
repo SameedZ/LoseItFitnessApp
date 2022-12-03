@@ -18,10 +18,81 @@
         android:usesCleartextTraffic="true"
         android:name=".ApplicationClass"
         tools:targetApi="31">
+
+
+
         <activity
 
-            android:name=".HomeScreen"
+            android:name=".EditProfile"
             android:exported="false" />
+        <activity
+            android:name=".Excercise"
+            android:exported="false" />
+        <activity
+            android:name=".Dashboard"
+            android:exported="false" />
+        <activity
+            android:name=".NewWorkoutAdd"
+            android:exported="false" />
+        <activity
+            android:name=".Filters"
+            android:exported="false" />
+        <activity
+            android:name=".Category"
+            android:exported="false" />
+        <activity
+            android:name=".getstarted"
+            android:exported="false" />
+        <activity
+            android:name=".goal"
+            android:exported="false" />
+        <activity
+            android:name=".Level"
+            android:exported="false" />
+        <activity
+            android:name=".height"
+            android:exported="false" />
+        <activity
+            android:name=".weightgoal"
+            android:exported="false" />
+        <activity
+            android:name=".Weight"
+            android:exported="false" />
+        <activity
+            android:name=".SelectFavorite"
+            android:exported="false" />
+
+        <activity
+            android:name=".NewWorkoutAdd"
+            android:exported="false" />
+        <activity
+            android:name=".Filters"
+            android:exported="false" />
+        <activity
+            android:name=".Category"
+            android:exported="false" />
+        <activity
+            android:name=".getstarted"
+            android:exported="false" />
+        <activity
+            android:name=".goal"
+            android:exported="false" />
+        <activity
+            android:name=".Level"
+            android:exported="false" />
+        <activity
+            android:name=".height"
+            android:exported="false" />
+        <activity
+            android:name=".weightgoal"
+            android:exported="false" />
+        <activity
+            android:name=".Weight"
+            android:exported="false" />
+        <activity
+            android:name=".SelectFavorite"
+            android:exported="false" />
+
         <activity
             android:name=".SignUpScreen"
             android:exported="false" />
@@ -37,7 +108,6 @@
         <activity
             android:name=".Welcome1Screen"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -47,7 +117,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

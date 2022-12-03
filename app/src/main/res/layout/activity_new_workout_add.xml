@@ -1,9 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".NewWorkoutAdd">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/backskipbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="30dp"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="51dp">
+
+        <ImageView
+            android:id="@+id/iv_backarrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            app:srcCompat="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/bebasneue_regular"
+            android:text="New Workout"
+            android:textAlignment="center"
+            android:textColor="#191919"
+            android:textSize="30dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/workoutname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/backskipbar"
+        android:orientation="vertical"
+        android:paddingHorizontal="40dp"
+        android:layout_marginTop="40dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Workout Name"
+            android:textStyle="bold"
+            android:textColor="#3A4750"
+            android:textSize="16dp" />
+
+        <EditText
+            android:layout_marginTop="10dp"
+            android:id="@+id/et_fullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/inputstyle_email"
+            android:ems="10"
+            android:fontFamily="@font/montserrat_medium"
+            android:hint="Workout Name"
+            android:inputType="textPersonName"
+            android:paddingLeft="20dp"
+            android:textColor="#303841"
+            android:textSize="14dp"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/workoutlevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/workoutname"
+        android:layout_marginTop="30dp"
+        android:paddingHorizontal="45dp"
+        android:orientation="vertical">
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Choose Fitness Level"
+            android:textStyle="bold"
+            android:textColor="#3A4750"
+            android:textSize="16dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/beginner"
+            android:layout_marginTop="10dp"/>
+        <ImageView
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/intermediate"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/advanced"
+            android:layout_marginTop="30dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/workoutadd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/workoutlevel"
+        android:orientation="vertical"
+        android:paddingHorizontal="40dp"
+        android:layout_marginTop="30dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Workout"
+            android:textStyle="bold"
+            android:textColor="#3A4750"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/addworkout"
+            android:layout_marginTop="10dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/loginfields"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/workoutadd"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/nextbutton1"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#B0C929"
+            android:fontFamily="@font/dmsans_bold"
+            android:textColor="@color/white"
+            android:text="create workout"
+            android:textSize="18dp"
+            android:textStyle="bold"
+
+
+            />
+    </LinearLayout>
+
+</RelativeLayout>

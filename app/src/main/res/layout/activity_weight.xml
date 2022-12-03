@@ -1,9 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingHorizontal="40dp"
     tools:context=".Weight">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/backskipbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="51dp">
+
+        <ImageView
+            android:id="@+id/iv_backarrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            app:srcCompat="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="39dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="skip"
+            android:textAlignment="textEnd"
+            android:textColor="#191919"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/favouritecate"
+        android:layout_width="409dp"
+        android:layout_height="104dp"
+        android:layout_below="@+id/backskipbar"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="65dp">
+
+        <TextView
+            android:id="@+id/tv_hellothere"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dmsans_medium"
+            android:text="Step 3 of 6"
+            android:textColor="#3A4750"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/bebasneue_regular"
+            android:text="How much do you weight?"
+            android:textColor="#000000"
+            android:textSize="30dp"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/weightinput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/favouritecate"
+        android:layout_marginTop="30dp"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/weightinput">
+
+        </ImageView>
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/inputstyle_email"
+            android:ems="10"
+            android:fontFamily="@font/montserrat_medium"
+            android:inputType="number"
+            android:layout_marginTop="30dp"
+            android:paddingLeft="20dp"
+            android:hint="|kg"
+            android:textColorHint="#000000"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="14dp"
+
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/loginfields"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/weightinput"
+
+        android:orientation="vertical"
+        android:layout_marginTop="80dp">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/nextbutton1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#B0C929"
+            android:fontFamily="@font/dmsans_bold"
+            android:textColor="@color/white"
+            android:text="Next Steps"
+            android:textSize="18dp"
+            android:textStyle="bold"
+
+
+            />
+    </LinearLayout>
+
+</RelativeLayout>
