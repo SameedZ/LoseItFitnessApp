@@ -16,11 +16,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Loseit_androidapp"
         android:usesCleartextTraffic="true"
+        android:name=".ApplicationClass"
         tools:targetApi="31">
+
+
+
         <activity
-            android:name=".Training"
-            android:exported="false" />
-        <activity
+
             android:name=".EditProfile"
             android:exported="false" />
         <activity
@@ -59,9 +61,7 @@
         <activity
             android:name=".SelectFavorite"
             android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
+
         <activity
             android:name=".SignUpScreen"
             android:exported="false" />
@@ -78,7 +78,7 @@
             android:name=".Welcome1Screen"
             android:exported="false" />
         <activity
-            android:name=".HomeScreen"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
