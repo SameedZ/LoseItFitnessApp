@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Loseit_androidapp</string>
+<<<<<<< HEAD
     <string name="new_workout">New Workout</string>
     <string name="workout_name">Workout Name</string>
     <string name="choose_fitness_level">Choose Fitness Level</string>
@@ -23,4 +24,17 @@
     <string name="home">Home</string>
     <string name="exercise">Exercise</string>
     <string name="profile">Profile</string>
+=======
+    <string name="title_activity_side_menu">Side_menu</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+>>>>>>> 0b969fd05f6fb046d067860f118a182e89211f82
 </resources>

@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
         <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout-v28/activity_add_new_workout.xml" value="0.22395833333333334" />
         <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_add_new_workout.xml" value="0.225" />
         <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_bottom_navigation_bar.xml" value="0.18" />
@@ -24,8 +25,44 @@
         <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_welcome3_screen.xml" value="0.225" />
         <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/rv_exercises.xml" value="0.25" />
         <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/menu/nav_menu.xml" value="0.225" />
+=======
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/activity_category.xml" value="0.264" />
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/activity_dashboard.xml" value="0.22826086956521738" />
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/activity_edit_profile.xml" value="0.22826086956521738" />
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/activity_excercise.xml" value="0.536" />
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/activity_filters.xml" value="0.2" />
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/activity_getstarted.xml" value="0.22826086956521738" />
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/activity_goal.xml" value="0.22826086956521738" />
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/activity_height.xml" value="0.22826086956521738" />
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/activity_home_screen.xml" value="0.22826086956521738" />
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/activity_level.xml" value="0.264" />
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/activity_login_screen.xml" value="0.22826086956521738" />
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/activity_new_workout_add.xml" value="0.22826086956521738" />
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/activity_select_favorite.xml" value="0.264" />
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/activity_side_menu.xml" value="0.22826086956521738" />
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/activity_sign_up_screen.xml" value="0.22826086956521738" />
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/activity_training.xml" value="0.22826086956521738" />
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/activity_weight.xml" value="0.264" />
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/activity_weightgoal.xml" value="0.22826086956521738" />
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/activity_welcome1_screen.xml" value="0.22826086956521738" />
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/app_bar_side_menu.xml" value="0.22826086956521738" />
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/content_side_menu.xml" value="0.22826086956521738" />
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/fragment_gallery.xml" value="0.22826086956521738" />
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/fragment_home.xml" value="0.22826086956521738" />
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/fragment_slideshow.xml" value="0.22826086956521738" />
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/nav_header_side_menu.xml" value="0.22826086956521738" />
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/menu/activity_main_drawer.xml" value="0.25" />
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/menu/side_menu.xml" value="0.25" />
+>>>>>>> 0b969fd05f6fb046d067860f118a182e89211f82
         <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/drawable/bottommenu_bg.xml" value="0.1725" />
         <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/drawable/splashscreenbg.xml" value="0.1505" />
+        <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_category.xml" value="0.2394185549380077" />
+        <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_dashboard.xml" value="0.19837537409149208" />
+        <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_edit_profile.xml" value="0.2394185549380077" />
+        <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_excercise.xml" value="0.2394185549380077" />
+        <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_getstarted.xml" value="0.2394185549380077" />
+        <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_height.xml" value="0.2394185549380077" />
         <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_home_screen.xml" value="0.19837537409149208" />
         <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_login_screen.xml" value="0.264" />
         <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_main.xml" value="0.264" />

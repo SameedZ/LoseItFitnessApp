@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:paddingHorizontal="20dp"
+            tools:context=".EditProfile">
+
+            <LinearLayout
+                android:id="@+id/backskipbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="34dp"
+                tools:layout_editor_absoluteY="51dp">
+
+                <ImageView
+                    android:id="@+id/iv_backarrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="10dp"
+                    app:srcCompat="@drawable/back" />
+
+                <TextView
+                    android:id="@+id/tv_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginTop="30dp"
+
+                    android:fontFamily="@font/bebasneue_regular"
+                    android:text="Edit Profile"
+                    android:textColor="#000000"
+                    android:textSize="30dp"
+
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/editprofile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="40dp"
+                android:layout_below="@id/backskipbar"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="20dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/profileedit">
+
+                </ImageView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/viewname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editprofile"
+                android:layout_marginTop="20dp"
+                android:paddingHorizontal="20dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Full Name"
+                    android:textColor="#3A4750"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/et_fullname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/inputstyle_email"
+                    android:ems="10"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="20dp"
+                    android:hint="Sameed Zahoor"
+                    android:textColor="#303841"
+                    android:textSize="14dp"
+
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/viewphone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/viewname"
+                android:layout_marginTop="20dp"
+                android:paddingHorizontal="20dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Phone"
+                    android:textColor="#3A4750"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/inputstyle_email"
+                    android:ems="10"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="20dp"
+                    android:hint="03xx xxxxxxx"
+                    android:textColor="#303841"
+                    android:textSize="14dp"
+
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/viewemail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/viewphone"
+                android:layout_marginTop="20dp"
+                android:paddingHorizontal="20dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Email Address"
+                    android:textColor="#3A4750"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/et_emailaddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/inputstyle_email"
+                    android:ems="10"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="20dp"
+                    android:hint="loseit@gmail.com"
+                    android:textColor="#303841"
+                    android:textSize="14dp"
+
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/viewweight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/viewemail"
+                android:layout_marginTop="20dp"
+                android:paddingHorizontal="20dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Weight"
+
+                    android:textColor="#3A4750"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/et_weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/inputstyle_email"
+                    android:ems="10"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="20dp"
+                    android:hint="70"
+                    android:drawableEnd="@drawable/weightinput"
+                    android:textColor="#303841"
+                    android:textSize="14dp"
+
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/viewheight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/viewweight"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Height"
+                    android:textColor="#3A4750"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/et_height"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/inputstyle_email"
+                    android:ems="10"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="20dp"
+                    android:drawableEnd="@drawable/heightinput"
+                    android:hint="80"
+                    android:textColor="#303841"
+                    android:textSize="14dp"
+
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/viewgender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/viewheight"
+                android:layout_marginTop="20dp"
+                android:paddingHorizontal="20dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Gender"
+                    android:textColor="#3A4750"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/et_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/inputstyle_email"
+                    android:ems="10"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="20dp"
+                    android:hint="Male"
+                    android:textColor="#303841"
+                    android:textSize="14dp"
+
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/viewage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/viewgender"
+                android:layout_marginTop="20dp"
+                android:paddingHorizontal="20dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Age"
+                    android:textColor="#3A4750"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/et_age"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/inputstyle_email"
+                    android:ems="10"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="20dp"
+                    android:hint="21"
+                    android:textColor="#303841"
+                    android:textSize="14dp"
+
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/loginfields"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/viewage"
+
+                android:orientation="vertical"
+                android:layout_marginTop="80dp">
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/nextbutton1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#B0C929"
+                    android:fontFamily="@font/dmsans_bold"
+                    android:textColor="@color/white"
+                    android:text="Save"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+
+
+                    />
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
