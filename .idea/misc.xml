@@ -8,6 +8,8 @@
         <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_add_new_workout.xml" value="0.225" />
         <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_bottom_navigation_bar.xml" value="0.18" />
         <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_category.xml" value="0.225" />
+        <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_excercise.xml" value="0.225" />
+        <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_exercise_details.xml" value="0.225" />
         <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_exercises.xml" value="0.22" />
         <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_getstarted.xml" value="0.225" />
         <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_goal.xml" value="0.225" />
@@ -28,6 +30,7 @@
         <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_welcome2_screen.xml" value="0.225" />
         <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_welcome3_screen.xml" value="0.225" />
         <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/rv_exercises.xml" value="0.25" />
+        <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/start_activity_2.xml" value="0.225" />
         <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/menu/nav_menu.xml" value="0.225" />
         <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/drawable/bottommenu_bg.xml" value="0.1725" />
         <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/drawable/splashscreenbg.xml" value="0.1505" />

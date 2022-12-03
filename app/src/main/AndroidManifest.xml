@@ -17,6 +17,9 @@
         android:theme="@style/Theme.Loseit_androidapp"
         android:usesCleartextTraffic="true"
         tools:targetApi="31" >
+<!--        <activity-->
+<!--            android:name=".ExerciseDetails"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".StartTraining"
             android:exported="false" />
@@ -25,7 +28,8 @@
             android:exported="false" />
         <activity
             android:name=".BottomNavigationBar"
-            android:exported="false" /> <!-- <activity -->
+            android:exported="false" />
+        <!-- <activity -->
         <!-- android:name=".Exercises" -->
         <!-- android:exported="false" /> -->
         <activity
@@ -88,9 +92,7 @@
             android:name=".Welcome1Screen"
             android:exported="false" />
         <activity
-            android:name=".Exercises"
-            android:exported="true" >
-            android:name=".MainActivity"
+            android:name=".ExerciseDetails"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

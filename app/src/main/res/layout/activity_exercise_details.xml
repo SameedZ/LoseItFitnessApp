@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#FCFCFC"
+    tools:context=".ExerciseDetails">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/banner"
+                android:src="@drawable/exercise_details_bg"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rect"
+                android:layout_below="@+id/banner"
+                android:layout_marginTop="-40dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/rect"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ex_details_time"
+                android:layout_below="@+id/banner"
+                android:layout_marginTop="-20dp"
+                android:layout_centerHorizontal="true"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/banner"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="40dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/level"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/level"
+                    />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/beginner1"
+                    android:backgroundTint="#696969"
+                    android:layout_below="@+id/level"
+                    android:textColor="@color/black"
+                    android:id="@+id/lvlBtn"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/level"
+                    android:id="@+id/category"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="70dp"
+                    android:text="Category"
+                    />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Cardio"
+                    android:backgroundTint="#696969"
+                    android:layout_toEndOf="@+id/level"
+                    android:layout_below="@id/category"
+                    android:layout_marginStart="50dp"
+                    android:textColor="@color/black"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/category"
+                    android:text="Weight" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/weight"
+                    android:layout_marginStart="30dp"
+                    android:layout_toEndOf="@+id/category"
+                    android:backgroundTint="#696969"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Lose"
+                    android:textColor="@color/black"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/exTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lvlBtn"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/bebasneue_regular"
+                    android:text="@string/exercise_with_sittin"
+                    android:textColor="#000000"
+                    android:textSize="22sp" />
+                <TextView
+                    android:id="@+id/exDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/exTitle"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/dmsans_regular"
+                    android:text="@string/there_are_many_variations_of_passages_of_lorem_ipsum_available_but_the_majority_have_suffered_alteration_in_some_form_by_injected_humour"
+                    android:textColor="#7A7878"
+                    android:textSize="12sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/exDescription"
+                    android:id="@+id/rl"
+                    >
+                    <TextView
+                        android:id="@+id/plan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="60dp"
+                        android:fontFamily="@font/bebasneue_regular"
+                        android:text="@string/_3_weeks_20_exercises"
+                        android:textColor="#000000"
+                        android:textSize="22sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/plan"
+                        android:src="@drawable/schedule_btn"/>
+
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/program"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_below="@+id/rl"
+                    android:fontFamily="@font/bebasneue_regular"
+                    android:text="Exercise program"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
