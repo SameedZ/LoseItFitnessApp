@@ -47,6 +47,7 @@
         tools:layout_editor_absoluteY="65dp">
 
 
+
         <EditText
             android:id="@+id/et_fullname"
             android:layout_width="match_parent"
@@ -63,6 +64,8 @@
             android:textSize="14dp"
 
             />
+=======
+>>>>>>> 1807c3ebbcc463b040cdf2247fc528f143d5e9d7
 
     </LinearLayout>
 

@@ -19,10 +19,7 @@
         android:name=".ApplicationClass"
         tools:targetApi="31">
 
-
-
         <activity
-
             android:name=".EditProfile"
             android:exported="false" />
         <activity
