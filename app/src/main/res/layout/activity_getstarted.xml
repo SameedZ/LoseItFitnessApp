@@ -1,9 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".getstarted">
+    android:background="@color/white"
+    android:paddingHorizontal="40dp"
+    tools:context=".LoginScreen">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/iv_backarrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:srcCompat="@drawable/back"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="51dp" />
+
+    <LinearLayout
+        android:id="@+id/getstartedmsg"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_backarrow"
+        android:layout_marginTop="70dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="65dp">
+
+        <TextView
+            android:id="@+id/tv_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bebasneue_regular"
+            android:text="let's Get started"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="30dp"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_hellothere"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dmsans_medium"
+            android:text="Make your spring workout effective and strong"
+            android:textColor="#3A4750"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/maskgroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/getstartedmsg"
+
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/maskgroup">
+
+        </ImageView>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/maskgroup1"
+            android:layout_gravity="center"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/loginfields"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/maskgroup"
+        android:orientation="vertical"
+        android:layout_marginTop="100dp">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/nextbutton1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#B0C929"
+            android:fontFamily="@font/dmsans_bold"
+            android:textColor="@color/white"
+            android:text="Get Started"
+            android:textSize="18dp"
+            android:textStyle="bold"
+
+
+            />
+    </LinearLayout>
+</RelativeLayout>
