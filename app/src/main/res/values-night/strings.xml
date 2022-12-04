@@ -9,4 +9,6 @@
     <string name="upgrade_premium">Upgrade premium</string>
     <string name="english">English</string>
     <string name="result">Result</string>
+    <string name="today_you_ve_an_average_of_71_bpm">Today you\'ve an average of 71 bpm</string>
+    <string name="notifications">notifications</string>
 </resources>
