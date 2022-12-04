@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".ApplicationClass"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -16,10 +17,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Loseit_androidapp"
         android:usesCleartextTraffic="true"
+<<<<<<< HEAD
         tools:targetApi="31" >
 <!--        <activity-->
 <!--            android:name=".ExerciseDetails"-->
 <!--            android:exported="false" />-->
+=======
+        tools:targetApi="31">
+        <activity
+            android:name=".FavoriteWorkout"
+            android:exported="false" />
+        <activity
+            android:name=".FavoriteMeal"
+            android:exported="false" />
+        <activity
+            android:name=".FavoritesEmpty"
+            android:exported="false" />
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+
+>>>>>>> e5142b51083ed05afdfa91920d5408a89461b1f2
         <activity
             android:name=".StartTraining"
             android:exported="false" />
@@ -28,15 +46,18 @@
             android:exported="false" />
         <activity
             android:name=".BottomNavigationBar"
+<<<<<<< HEAD
             android:exported="false" />
         <!-- <activity -->
         <!-- android:name=".Exercises" -->
         <!-- android:exported="false" /> -->
+=======
+            android:exported="false" /> 
+>>>>>>> e5142b51083ed05afdfa91920d5408a89461b1f2
         <activity
             android:name=".AddNewWorkout"
-            android:exported="false" /> <!-- <activity -->
-        <!-- android:name=".MainActivity" -->
-        <!-- android:name=".ApplicationClass" /> -->
+            android:exported="false" /> 
+
         <activity
             android:name=".EditProfile"
             android:exported="false" />

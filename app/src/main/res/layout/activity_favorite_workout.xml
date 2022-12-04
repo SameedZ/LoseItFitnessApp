@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+
+    tools:context=".FavoriteMeal">
+
+    <LinearLayout
+        android:id="@+id/backskipbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="51dp">
+
+        <ImageView
+            android:id="@+id/iv_backarrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="40dp"
+            app:srcCompat="@drawable/back" />
+
+        <TextView
+            android:id="@+id/tv_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="30dp"
+
+            android:fontFamily="@font/bebasneue_regular"
+            android:text="My Favorite"
+            android:textColor="#000000"
+            android:textSize="30dp"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/backskipbar"
+        android:orientation="horizontal"
+        android:paddingHorizontal="30dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#ededed"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Food"
+            android:textColor="#191919"
+            android:textSize="11dp"
+
+            android:textStyle="bold"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginLeft="30dp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#000"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="workout"
+            android:textColor="@color/white"
+            android:textSize="11dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>
