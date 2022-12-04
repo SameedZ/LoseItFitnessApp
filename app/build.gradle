@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -14,6 +15,8 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
+
 
     buildTypes {
         release {
@@ -39,6 +42,8 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
     implementation 'androidx.navigation:navigation-fragment:2.5.3'
     implementation 'androidx.navigation:navigation-ui:2.5.3'
+    implementation 'com.google.firebase:firebase-auth:21.1.0'
+
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
@@ -49,5 +54,16 @@ dependencies {
 
     // one signal
     implementation 'com.onesignal:OneSignal:[4.0.0, 4.99.99]'
-//>>>>>>> 0b969fd05f6fb046d067860f118a182e89211f82
+
+
+
+    // image picker
+    implementation 'com.github.dhaval2404:imagepicker:2.1'
+
+
+
+
+
 }
+
+

@@ -52,7 +52,7 @@
             android:name=".AddNewWorkout"
             android:exported="false" />
         <activity
-            android:name=".EditProfile"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".Excercise"
@@ -91,7 +91,7 @@
             android:name=".SelectFavorite"
             android:exported="false" />
         <activity
-            android:name=".SignUpScreen"
+            android:name=".EditProfile"
             android:exported="false" />
         <activity
             android:name=".LoginScreen"
@@ -106,7 +106,7 @@
             android:name=".Welcome1Screen"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".SignUpScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

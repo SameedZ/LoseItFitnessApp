@@ -81,9 +81,9 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/weightloss"
+            android:layout_gravity="center"
             android:layout_marginTop="14dp"
-            android:layout_gravity="center"/>
+            android:src="@drawable/weightloss" />
     </LinearLayout>
 
     <LinearLayout
@@ -98,9 +98,9 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/gainmuscle"
+            android:layout_gravity="center"
             android:layout_marginTop="14dp"
-            android:layout_gravity="center"/>
+            android:src="@drawable/gainmuscle" />
     </LinearLayout>
 
     <LinearLayout
@@ -136,7 +136,7 @@
             android:background="#B0C929"
             android:fontFamily="@font/dmsans_bold"
             android:textColor="@color/white"
-            android:text="finish Steps"
+            android:text="SKIP"
             android:textSize="18dp"
             android:textStyle="bold"
 

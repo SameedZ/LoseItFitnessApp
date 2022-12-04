@@ -78,15 +78,18 @@
         android:orientation="vertical">
 
        <ImageView
+           android:id="@+id/iv_begineer"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:src="@drawable/beginner"/>
         <ImageView
+            android:id="@+id/iv_intermediate"
             android:layout_marginTop="30dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/intermediate"/>
         <ImageView
+            android:id="@+id/iv_advanced"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/advanced"
@@ -104,14 +107,14 @@
 
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/nextbutton1"
+            android:id="@+id/btn_skip"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="#B0C929"
             android:fontFamily="@font/dmsans_bold"
             android:textColor="@color/white"
-            android:text="Next Steps"
+            android:text="Skip"
             android:textSize="18dp"
             android:textStyle="bold"
 
