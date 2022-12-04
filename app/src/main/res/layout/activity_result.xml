@@ -30,13 +30,12 @@
         android:id="@+id/exerciseHeading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Result"
+        android:text="@string/result"
         android:gravity="center"
         android:fontFamily="@font/bebasneue_regular"
         android:padding="10dp"
         android:textSize="30sp"
         android:textColor="#000000"
-        android:layout_gravity="center"
         />
 
   </LinearLayout>

@@ -57,5 +57,14 @@
     <string name="there_are_many_variations_of_passages_of_lorem_ipsum_available_but_the_majority_have_suffered_alteration_in_some_form_by_injected_humour">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,</string>
     <string name="exercise_with_sittin">Exercise with sitting Dumbells</string>
     <string name="_3_weeks_20_exercises">3 weeks - 20 exercises</string>
+    <string name="app_settings">App settings</string>
+    <string name="reminder">Reminder</string>
+    <string name="change_password">Change Password</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="apple_health">Apple Health</string>
+    <string name="language">Language</string>
+    <string name="upgrade_premium">Upgrade premium</string>
+    <string name="english">English</string>
+    <string name="result">Result</string>
     <!--    >>>>>>> 0b969fd05f6fb046d067860f118a182e89211f82-->
 </resources>

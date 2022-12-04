@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.loseit_androidapp" >
+    package="com.example.loseit_androidapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -17,13 +17,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Loseit_androidapp"
         android:usesCleartextTraffic="true"
-<<<<<<< HEAD
-        tools:targetApi="31" >
-<!--        <activity-->
-<!--            android:name=".ExerciseDetails"-->
-<!--            android:exported="false" />-->
-=======
         tools:targetApi="31">
+        <activity
+            android:name=".AppSettings"
+            android:exported="false" />
+         <activity
+         android:name=".ExerciseDetails"
+         android:exported="false" />
         <activity
             android:name=".FavoriteWorkout"
             android:exported="false" />
@@ -36,8 +36,6 @@
         <activity
             android:name=".Profile"
             android:exported="false" />
-
->>>>>>> e5142b51083ed05afdfa91920d5408a89461b1f2
         <activity
             android:name=".StartTraining"
             android:exported="false" />
@@ -46,18 +44,13 @@
             android:exported="false" />
         <activity
             android:name=".BottomNavigationBar"
-<<<<<<< HEAD
             android:exported="false" />
         <!-- <activity -->
         <!-- android:name=".Exercises" -->
         <!-- android:exported="false" /> -->
-=======
-            android:exported="false" /> 
->>>>>>> e5142b51083ed05afdfa91920d5408a89461b1f2
         <activity
             android:name=".AddNewWorkout"
-            android:exported="false" /> 
-
+            android:exported="false" />
         <activity
             android:name=".EditProfile"
             android:exported="false" />
@@ -113,7 +106,7 @@
             android:name=".Welcome1Screen"
             android:exported="false" />
         <activity
-            android:name=".ExerciseDetails"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -2,4 +2,11 @@
 <resources>
     <string name="exercise_with_sittin">Exercise with sitting Dumbells</string>
     <string name="_3_weeks_20_exercises">3 weeks - 20 exercises</string>
+    <string name="reminder">Reminder</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="apple_health">Apple Health</string>
+    <string name="language">Language</string>
+    <string name="upgrade_premium">Upgrade premium</string>
+    <string name="english">English</string>
+    <string name="result">Result</string>
 </resources>
