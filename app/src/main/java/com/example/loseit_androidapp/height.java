@@ -17,12 +17,12 @@ public class height extends AppCompatActivity {
         setContentView(R.layout.activity_height);
 
         et_height = findViewById(R.id.et_height);
-        btn_next = findViewById(R.id.next);
+        btn_next = findViewById(R.id.btn_next);
 
         btn_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                saveHeighttoDB();
+                //saveHeighttoDB();
                 Intent intent = new Intent(height.this,Level.class);
 
                 startActivity(intent);

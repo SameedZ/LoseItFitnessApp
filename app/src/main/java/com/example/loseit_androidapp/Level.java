@@ -17,7 +17,7 @@ public class Level extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level);
-        btn_skip = findViewById(R.id.btn_signup);
+        btn_skip = findViewById(R.id.btn_skip);
 
         beg = findViewById(R.id.iv_begineer);
         inter = findViewById(R.id.iv_intermediate);
@@ -26,7 +26,7 @@ public class Level extends AppCompatActivity {
         beg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                saveGoaltoDB("begineer");
+               // saveGoaltoDB("begineer");
                 movetonextactivity();
             }
         });
@@ -34,7 +34,7 @@ public class Level extends AppCompatActivity {
         inter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                saveGoaltoDB("intermediate");
+                //saveGoaltoDB("intermediate");
                 movetonextactivity();
             }
         });
@@ -42,7 +42,7 @@ public class Level extends AppCompatActivity {
         adv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                saveGoaltoDB("advanced");
+                //saveGoaltoDB("advanced");
                 movetonextactivity();
             }
         });
@@ -62,16 +62,11 @@ public class Level extends AppCompatActivity {
 
     }
 
-    private void saveGoaltoDB(String str_goal) {
-        // send volley request here....
-        return ;
-
-    }
 
     public void movetonextactivity(){
         Intent intent = new Intent(Level.this,goal.class);
         startActivity(intent);
-        finish();
+        //finish();
     }
 
 

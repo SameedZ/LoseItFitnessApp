@@ -69,12 +69,12 @@ public class SignUpScreen extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                                   if (task.isSuccessful()){
                                       Toast.makeText(SignUpScreen.this, "Sign Up Complete.", Toast.LENGTH_SHORT).show();
-                                      SendUserInfoToWebServer();
+                                      //SendUserInfoToWebServer();
                                       Intent intent = new Intent(SignUpScreen.this,Weight.class);
                                       startActivity(intent);
                                       finish();
                                   } else {
-                                      Toast.makeText(SignUpScreen.this, ""+task.getException() , Toast.LENGTH_SHORT).show();
+                                      Toast.makeText(SignUpScreen.this, "err"+task.getException() , Toast.LENGTH_SHORT).show();
                                   }
                         }
 
@@ -91,7 +91,7 @@ public class SignUpScreen extends AppCompatActivity {
                             }, new Response.ErrorListener() {
                                 @Override
                                 public void onErrorResponse (VolleyError error){
-                                    Toast.makeText(SignUpScreen.this, error.getMessage().toString(), Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(SignUpScreen.this, ""+error.getMessage(), Toast.LENGTH_SHORT).show();
                                 }
                             }
 
