@@ -3,18 +3,18 @@ package com.example.loseit_androidapp;
 import android.net.Uri;
 
 public class MyMeals {
-    private Uri imageUri;
+    private Integer imageUri;
     private String timeDuration;
     private String calories;
     private String mealTitle;
 
     public MyMeals() {}
 
-    public Uri getImageUri() {
+    public Integer getImageUri() {
         return imageUri;
     }
 
-    public void setImageUri(Uri imageUri) {
+    public void setImageUri(Integer imageUri) {
         this.imageUri = imageUri;
     }
 
@@ -42,7 +42,7 @@ public class MyMeals {
         this.mealTitle = mealTitle;
     }
 
-    public MyMeals(Uri imageUri, String timeDuration, String calories, String mealTitle) {
+    public MyMeals(Integer imageUri, String timeDuration, String calories, String mealTitle) {
         this.imageUri = imageUri;
         this.timeDuration = timeDuration;
         this.calories = calories;

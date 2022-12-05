@@ -20,24 +20,25 @@ public class MealPlan extends AppCompatActivity {
 
         MyMeals[] myMeals = new MyMeals[] {
                 new MyMeals(
-                    imageUri,
+                    R.drawable.meal_bg,
                         "10 min",
                         "20 cal",
                         "Dummy meal"
                 ),
                 new MyMeals(
-                        imageUri,
+                        R.drawable.meal_bg,
                         "30 min",
                         "20 cal",
                         "Dummy meal"
                 ),new MyMeals(
-                        imageUri,
+                    R.drawable.meal_bg,
                         "50 min",
                         "20 cal",
                         "Dummy meal"
                 ),
 
-
         };
+        MealPlanAdapter mealPlanAdapter = new MealPlanAdapter(myMeals, MealPlan.this);
+        recyclerView.setAdapter(mealPlanAdapter);
     }
 }

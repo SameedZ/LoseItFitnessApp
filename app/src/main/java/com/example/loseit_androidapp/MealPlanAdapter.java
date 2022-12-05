@@ -34,7 +34,7 @@ public class MealPlanAdapter extends RecyclerView.Adapter<MealPlanAdapter.ViewHo
         final MyMeals myMealsList = myMeals[position];
         holder.mealTitle.setText(myMealsList.getMealTitle());
         holder.timeDuration.setText(myMealsList.getTimeDuration());
-        holder.mealImage.setImageURI(myMealsList.getImageUri());
+        holder.mealImage.setImageResource(myMealsList.getImageUri());
         holder.calories.setText((myMealsList.getCalories()));
 
         holder.itemView.setOnClickListener(view ->
@@ -61,6 +61,5 @@ public class MealPlanAdapter extends RecyclerView.Adapter<MealPlanAdapter.ViewHo
             timeDuration = itemView.findViewById(R.id.time);
         }
     }
-
 
 }
