@@ -98,45 +98,13 @@
                     />
 
             </LinearLayout>
-            <LinearLayout
-                android:id="@+id/viewphone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/viewname"
-                android:layout_marginTop="20dp"
-                android:paddingHorizontal="20dp"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:text="Phone"
-                    android:textColor="#3A4750"
-                    android:textSize="16dp" />
 
-                <EditText
-                    android:id="@+id/et_phone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/inputstyle_email"
-                    android:ems="10"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:inputType="textPersonName"
-                    android:paddingLeft="20dp"
-                    android:hint="03xx xxxxxxx"
-                    android:textColor="#303841"
-                    android:textSize="14dp"
-
-                    />
-
-            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/viewemail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/viewphone"
+                android:layout_below="@id/viewname"
                 android:layout_marginTop="20dp"
                 android:paddingHorizontal="20dp"
                 android:orientation="vertical">
@@ -296,9 +264,9 @@
                     android:background="@drawable/inputstyle_email"
                     android:ems="10"
                     android:fontFamily="@font/montserrat_medium"
+                    android:hint="Enter your age"
                     android:inputType="textPersonName"
                     android:paddingLeft="20dp"
-                    android:hint="21"
                     android:textColor="#303841"
                     android:textSize="14dp"
 
@@ -318,7 +286,7 @@
 
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/nextbutton1"
+                    android:id="@+id/btn_Save"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
