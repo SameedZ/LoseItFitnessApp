@@ -65,7 +65,7 @@ android:name=".Notifications"
             android:name=".AddNewWorkout"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".SignUpScreen"
             android:exported="false" />
         <activity
             android:name=".Excercise"
@@ -119,7 +119,7 @@ android:name=".Notifications"
             android:name=".Welcome1Screen"
             android:exported="false" />
         <activity
-            android:name=".SignUpScreen"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
