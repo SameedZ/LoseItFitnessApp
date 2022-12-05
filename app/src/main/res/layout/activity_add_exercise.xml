@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+
+    tools:context=".AddExercise">
+
+    <LinearLayout
+        android:id="@+id/backskipbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="34dp"
+        android:paddingHorizontal="30dp"
+        tools:layout_editor_absoluteY="51dp">
+
+        <ImageView
+            android:id="@+id/iv_backarrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            app:srcCompat="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="39dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/bebasneue_regular"
+            android:text="Add Exercise"
+            android:textAlignment="center"
+            android:textColor="#191919"
+            android:textSize="30dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/backskipbar">
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/uploadexercisepicture">
+
+            </ImageView>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_exercisename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Exercise Name"
+            android:textColor="#3A4750"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/et_exercisename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/inputstyle_email"
+            android:ems="10"
+            android:fontFamily="@font/montserrat_medium"
+            android:hint="John Welles"
+            android:paddingLeft="20dp"
+            android:textColor="#303841"
+            android:textSize="14dp"
+
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tv_duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Duration"
+                android:textColor="#3A4750"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/tv_calories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="100dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Calories Burnt"
+                android:textColor="#3A4750"
+                android:textSize="16dp" />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_duration"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/inputstyle_email"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:paddingLeft="20dp"
+                android:hint="5"
+                android:textAlignment="center"
+                android:textColor="#303841"
+                android:textSize="14dp"
+
+                />
+
+            <EditText
+                android:id="@+id/et_calories"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/inputstyle_email"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:paddingLeft="20dp"
+                android:hint="125"
+                android:textAlignment="center"
+                android:textColor="#303841"
+                android:textSize="14dp"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tv_level"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Level"
+                android:textColor="#3A4750"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/tv_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="130dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Category"
+                android:textColor="#3A4750"
+                android:textSize="16dp" />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_level"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/inputstyle_email"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:paddingLeft="20dp"
+                android:hint="Beginner"
+                android:textColor="#303841"
+                android:textSize="14dp"
+
+                />
+
+            <EditText
+                android:id="@+id/et_category"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/inputstyle_email"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:paddingLeft="20dp"
+                android:hint="Cardio"
+                android:textColor="#303841"
+                android:textSize="14dp"
+
+                />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Description"
+            android:textColor="#3A4750"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/et_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/inputstyle_email"
+            android:ems="10"
+            android:fontFamily="@font/montserrat_medium"
+            android:hint="Description"
+            android:paddingLeft="20dp"
+            android:textColor="#303841"
+            android:textSize="14dp"
+
+            />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/loginfields"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input"
+        android:paddingHorizontal="30dp"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+
+        >
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#B0C929"
+            android:fontFamily="@font/dmsans_bold"
+            android:textColor="@color/white"
+            android:text="add"
+            android:textStyle="bold"
+
+            />
+    </LinearLayout>
+</RelativeLayout>
