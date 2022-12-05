@@ -8,10 +8,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class Level extends AppCompatActivity {
 
     ImageView beg,inter,adv;
     Button btn_skip;
+
+    FirebaseAuth mAuth;
+    FirebaseUser mUser;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,10 +32,14 @@ public class Level extends AppCompatActivity {
         inter = findViewById(R.id.iv_intermediate);
         adv = findViewById(R.id.iv_advanced);
 
+        mAuth = FirebaseAuth.getInstance();
+        mUser = mAuth.getCurrentUser();
+
+
         beg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               // saveGoaltoDB("begineer");
+                saveGoaltoDB("begineer");
                 movetonextactivity();
             }
         });
@@ -34,7 +47,7 @@ public class Level extends AppCompatActivity {
         inter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //saveGoaltoDB("intermediate");
+                saveGoaltoDB("intermediate");
                 movetonextactivity();
             }
         });
@@ -42,7 +55,7 @@ public class Level extends AppCompatActivity {
         adv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //saveGoaltoDB("advanced");
+                saveGoaltoDB("advanced");
                 movetonextactivity();
             }
         });
@@ -51,8 +64,8 @@ public class Level extends AppCompatActivity {
         btn_skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                saveGoaltoDB("null");
                 movetonextactivity();
-
             }
         });
 
@@ -62,11 +75,17 @@ public class Level extends AppCompatActivity {
 
     }
 
+    private void saveGoaltoDB(String fitnesslevel) {
+
+        FirebaseDatabase.getInstance().getReference().child("Users").child(mUser.getUid()).child("fitnesslevel").setValue(fitnesslevel);
+
+    }
+
 
     public void movetonextactivity(){
         Intent intent = new Intent(Level.this,goal.class);
         startActivity(intent);
-        //finish();
+        finish();
     }
 
 

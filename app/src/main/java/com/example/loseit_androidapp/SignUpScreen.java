@@ -23,6 +23,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -39,6 +40,7 @@ public class SignUpScreen extends AppCompatActivity {
     FirebaseAuth mAuth;
     FirebaseUser mUser;
 
+    final FirebaseDatabase database = FirebaseDatabase.getInstance();
 
 
     @Override
@@ -69,8 +71,11 @@ public class SignUpScreen extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                                   if (task.isSuccessful()){
                                       Toast.makeText(SignUpScreen.this, "Sign Up Complete.", Toast.LENGTH_SHORT).show();
-                                      //SendUserInfoToWebServer();
-                                      Intent intent = new Intent(SignUpScreen.this,Weight.class);
+
+                                      FirebaseDatabase.getInstance().getReference().child("Users").child(mUser.getUid()).child("email").setValue(email);
+                                      FirebaseDatabase.getInstance().getReference().child("Users").child(mUser.getUid()).child("password").setValue(password);
+
+                                        Intent intent = new Intent(SignUpScreen.this,Weight.class);
                                       startActivity(intent);
                                       finish();
                                   } else {

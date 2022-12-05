@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "209493240019",
+    "firebase_url": "https://loseitandroidapp-default-rtdb.firebaseio.com",
     "project_id": "loseitandroidapp",
     "storage_bucket": "loseitandroidapp.appspot.com"
   },

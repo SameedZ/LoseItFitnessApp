@@ -79,6 +79,7 @@
         android:orientation="vertical">
 
         <ImageView
+            android:id="@+id/iv_weightloss"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -87,15 +88,17 @@
     </LinearLayout>
 
     <LinearLayout
+
         android:id="@+id/gainmusclelinput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/weightlossinput"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="29dp"
         android:background="@drawable/vector"
         android:orientation="vertical">
 
         <ImageView
+            android:id="@+id/iv_gainmuscle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -113,6 +116,7 @@
         android:orientation="vertical">
 
         <ImageView
+            android:id="@+id/iv_improvefitness"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

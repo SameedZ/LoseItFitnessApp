@@ -8,10 +8,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class weightgoal extends AppCompatActivity {
 
     EditText et_weight;
     Button btn_next;
+    FirebaseAuth mAuth;
+    FirebaseUser mUser;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,19 +28,33 @@ public class weightgoal extends AppCompatActivity {
         et_weight = findViewById(R.id.et_idealweight);
         btn_next = findViewById(R.id.next);
 
+        mAuth = FirebaseAuth.getInstance();
+        mUser = mAuth.getCurrentUser();
+
+
 
         btn_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                saveHeighttoDB();
-                Intent intent = new Intent(weightgoal.this,height.class);
-                startActivity(intent);
-                finish();
+
+                // check if et_weight is empty
+                if (et_weight.getText().toString().isEmpty()) {
+                    // toast message
+                    et_weight.requestFocus();
+
+                }  else {
+                    saveWeighttoDB();
+                    Intent intent = new Intent(weightgoal.this,height.class);
+                    startActivity(intent);
+                    finish();
+                }
+
+
+
             }
 
-            private void saveHeighttoDB() {
-                // send the volley request through here.....
-                return ;
+            private void saveWeighttoDB() {
+                FirebaseDatabase.getInstance().getReference().child("Users").child(mUser.getUid()).child("idealweight").setValue(et_weight.getText().toString());
             }
         });
 
