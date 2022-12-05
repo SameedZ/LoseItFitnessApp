@@ -69,5 +69,10 @@
     <string name="today_you_ve_an_average_of_71_bpm">Today you\'ve an average of 71 bpm</string>
     <string name="_15_min_ago">15 min ago</string>
     <string name="notifications">notifications</string>
+    <string name="meal_plan">meal plan</string>
+    <string name="feel_like_you_got_a_recipe">Feel like you got a recipe ?</string>
+    <string name="water_tracker">Water Tracker</string>
+    <string name="_15_meals">15 meals</string>
+    <string name="green_beans_tomatoes_eggs">Green beans, tomatoes, eggs</string>
     <!--    >>>>>>> 0b969fd05f6fb046d067860f118a182e89211f82-->
 </resources>
