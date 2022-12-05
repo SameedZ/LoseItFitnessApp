@@ -28,6 +28,8 @@
 
 
 
+
+
  <activity
 android:name=".Notifications"
          android:exported="false" />
