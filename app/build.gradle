@@ -44,6 +44,7 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui:2.5.3'
     implementation 'com.google.firebase:firebase-auth:21.1.0'
     implementation 'com.google.firebase:firebase-database:20.1.0'
+    implementation 'com.google.firebase:firebase-storage:20.1.0'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
@@ -56,14 +57,8 @@ dependencies {
     // one signal
     implementation 'com.onesignal:OneSignal:[4.0.0, 4.99.99]'
 
-
-
     // image picker
     implementation 'com.github.dhaval2404:imagepicker:2.1'
-
-
-
-
 
 }
 
