@@ -1,5 +1,6 @@
 package com.example.loseit_androidapp;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,15 +10,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -29,9 +26,10 @@ public class LoginScreen extends AppCompatActivity {
 
     Button btn_login;
     ImageView iv_back;
+    TextView tv_view;
 
-
-    String url = URLHelper.server_url+"users/createuser";
+    FirebaseAuth mAuth;
+    FirebaseUser mUser;
 
 
     @Override
@@ -47,6 +45,9 @@ public class LoginScreen extends AppCompatActivity {
         str_email = et_email.getText().toString().trim();
         str_password = et_password.getText().toString().trim();
 
+        mAuth = FirebaseAuth.getInstance();
+        mUser = mAuth.getCurrentUser();
+
 
         // set on Clicker listener for moving back to screen main activity
         iv_back.setOnClickListener(new View.OnClickListener() {
@@ -58,47 +59,53 @@ public class LoginScreen extends AppCompatActivity {
             }
         });
 
+        // check if the user is signed in or not
+        if (mUser != null) {
+            Toast.makeText(this, mUser.getEmail().toString(), Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(LoginScreen.this,HomeScreen.class);
+            startActivity(intent);
+            finish();
+        } else {
+            // if user is not signed in
+            btn_login.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    // check if the email and password is empty
+                    if (et_email.getText().toString().isEmpty() || et_password.getText().toString().isEmpty()) {
+                        // toast message
+                        Toast.makeText(LoginScreen.this, "Please enter email and password", Toast.LENGTH_SHORT).show();
+                    } else {
+                        // if email and password is not empty
+                        // call the login method
+                        loginInWithEmailandPassword();
+                    }
+                }
+            });
+        }
 
+    }
 
+    private void loginInWithEmailandPassword() {
 
+        mAuth.signInWithEmailAndPassword(str_email,str_password).addOnCompleteListener(this, task -> {
+            if (task.isSuccessful()) {
+                // if login is successful
+                // toast message
+                Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show();
+                // move to home screen
+                Intent intent = new Intent(LoginScreen.this,HomeScreen.class);
+                startActivity(intent);
+                finish();
+            } else {
+                // if login is not successful
+                // toast message
+                Toast.makeText(this, "Login Failed", Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
     }
 
-
-    public void Login(View view){
-
-        // call to action on the login button
-        StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                Toast.makeText(LoginScreen.this, response, Toast.LENGTH_SHORT).show();
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse (VolleyError error){
-                Toast.makeText(LoginScreen.this, error.getMessage().toString(), Toast.LENGTH_SHORT).show();
-            }
-        }
-
-        )  {
-            @Nullable
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String,String> params = new HashMap<String,String>();
-
-                params.put("email",str_email);
-                params.put("password",str_password);
-                return params;
-            }
-        };
-
-        RequestQueue rq = Volley.newRequestQueue(LoginScreen.this);
-        rq.add(request);
-
-
-
-    } // login ends here
 
     public void navigatetosignuppage(View view){
         Intent intent = new Intent(LoginScreen.this,SignUpScreen.class);

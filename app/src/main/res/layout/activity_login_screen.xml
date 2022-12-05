@@ -148,7 +148,6 @@
             android:textColor="@color/white"
             android:text="Login"
             android:textStyle="bold"
-            android:onClick="Login"
 
             />
 

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "209493240019",
+    "firebase_url": "https://loseitandroidapp-default-rtdb.firebaseio.com",
+    "project_id": "loseitandroidapp",
+    "storage_bucket": "loseitandroidapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:209493240019:android:c9fdec5f8642fa7c644c26",
+        "android_client_info": {
+          "package_name": "com.example.loseit_androidapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "209493240019-ql46jk0onvm41v4soholj1dsegksdu4c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALt3gNlL--FmhUwcKS-o3IVhUkqugT1AU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "209493240019-ql46jk0onvm41v4soholj1dsegksdu4c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
