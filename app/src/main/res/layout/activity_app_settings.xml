@@ -255,9 +255,8 @@
         android:layout_marginTop="200dp"
         android:background="#B0C929"
         android:fontFamily="@font/dmsans_bold"
-        android:textColor="@color/white"
         android:text="@string/upgrade_premium"
-        android:textSize="22sp"
-        />
+        android:textColor="@color/white"
+        android:textSize="22sp" />
 
 </RelativeLayout>
