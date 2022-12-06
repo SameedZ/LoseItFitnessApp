@@ -55,9 +55,9 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
                 android:fontFamily="@font/montserrat_medium"
                 android:text="Cardio"
-                android:backgroundTint="@color/black"
                 android:textColor="#FFFFFF"
                 android:textSize="11sp"
 

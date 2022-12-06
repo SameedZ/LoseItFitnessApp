@@ -138,7 +138,7 @@
                 />
 
             <EditText
-                android:id="@+id/et_calories"
+                android:id="@+id/et_caloriesburnt"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"

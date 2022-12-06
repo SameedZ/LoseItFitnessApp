@@ -955,6 +955,7 @@
                     android:orientation="vertical">
 
                     <ImageButton
+                        android:id="@+id/ib_mealplans"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -975,6 +976,7 @@
                     android:orientation="vertical">
 
                     <ImageButton
+                        android:id="@+id/ib_excercises"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
