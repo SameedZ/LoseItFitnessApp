@@ -102,15 +102,17 @@ public class AddExercise extends AppCompatActivity {
             String date = java.text.DateFormat.getDateTimeInstance().format(java.util.Calendar.getInstance().getTime());
 
             DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("UserExcercises");
-            databaseReference.child(mUser.getUid()+date).child("userid").setValue(mUser.getUid().toString());
-            databaseReference.child(mUser.getUid()+date).child("time").setValue(date);
-            databaseReference.child(mUser.getUid()+date).child("exercisename").setValue(et_exercisename.getText().toString());
-            databaseReference.child(mUser.getUid()+date).child("duration").setValue(et_duration.getText().toString());
-            databaseReference.child(mUser.getUid()+date).child("caloriesburnt").setValue(et_caloriesburnt.getText().toString());
-            databaseReference.child(mUser.getUid()+date).child("level").setValue(et_level.getText().toString());
-            databaseReference.child(mUser.getUid()+date).child("category").setValue(et_category.getText().toString());
-            databaseReference.child(mUser.getUid()+date).child("description").setValue(et_description.getText().toString());
 
+            // create a uniqe excercise id
+            String exerciseid = databaseReference.push().getKey();
+            databaseReference.child(exerciseid).child("userid").setValue(mUser.getUid().toString());
+            databaseReference.child(exerciseid).child("time").setValue(date);
+            databaseReference.child(exerciseid).child("exercisename").setValue(et_exercisename.getText().toString());
+            databaseReference.child(exerciseid).child("duration").setValue(et_duration.getText().toString());
+            databaseReference.child(exerciseid).child("caloriesburnt").setValue(et_caloriesburnt.getText().toString());
+            databaseReference.child(exerciseid).child("level").setValue(et_level.getText().toString());
+            databaseReference.child(exerciseid).child("category").setValue(et_category.getText().toString());
+            databaseReference.child(exerciseid).child("description").setValue(et_description.getText().toString());
 
             // show a toast that the meal has been added
             Toast.makeText(this, "Excercise added", Toast.LENGTH_SHORT).show();
