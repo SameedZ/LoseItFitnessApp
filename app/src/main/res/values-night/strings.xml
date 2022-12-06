@@ -11,4 +11,7 @@
     <string name="result">Result</string>
     <string name="today_you_ve_an_average_of_71_bpm">Today you\'ve an average of 71 bpm</string>
     <string name="notifications">notifications</string>
+    <string name="meal_plan">meal plan</string>
+    <string name="water_tracker">Water Tracker</string>
+    <string name="_15_meals">15 meals</string>
 </resources>

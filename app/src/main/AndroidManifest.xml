@@ -4,6 +4,7 @@
     package="com.example.loseit_androidapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:name=".ApplicationClass"
@@ -18,19 +19,21 @@
         android:theme="@style/Theme.Loseit_androidapp"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-
-
+<!--        <activity-->
+<!--            android:name=".MealPlan"-->
+<!--            android:exported="false" />-->
+        <activity
+            android:name=".AddExercise"
+            android:exported="false" />
+        <activity
+            android:name=".AddMeal"
+            android:exported="false" />
         <activity
             android:name=".HomeScreen"
             android:exported="false" />
-
-
-
-
-
- <activity
-android:name=".Notifications"
-         android:exported="false" />
+        <activity
+            android:name=".Notifications"
+            android:exported="false" />
         <activity
             android:name=".AppSettings"
             android:exported="false" />
@@ -58,9 +61,9 @@ android:name=".Notifications"
         <activity
             android:name=".BottomNavigationBar"
             android:exported="false" />
-      <activity
-        android:name=".Exercises"
-       android:exported="false" />
+        <activity
+            android:name=".Exercises"
+            android:exported="false" />
         <activity
             android:name=".AddNewWorkout"
             android:exported="false" />
@@ -119,7 +122,7 @@ android:name=".Notifications"
             android:name=".Welcome1Screen"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".MealPlan"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

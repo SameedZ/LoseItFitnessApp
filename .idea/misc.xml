@@ -3,17 +3,27 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/activity_add_exercise.xml" value="0.22780797101449277" />
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/activity_add_meal.xml" value="0.22780797101449277" />
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/activity_edit_profile.xml" value="0.12158054711246201" />
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/activity_excercise.xml" value="0.12158054711246201" />
         <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/activity_getstarted.xml" value="0.10989583333333333" />
         <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/activity_goal.xml" value="0.10989583333333333" />
         <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/activity_height.xml" value="0.12158054711246201" />
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/activity_home_screen.xml" value="0.12158054711246201" />
         <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/activity_level.xml" value="0.10989583333333333" />
+        <entry key="..\:/Fall 2022/SMD/Loseit Fitness app/LoseItFitnessApp/app/src/main/res/layout/activity_login_screen.xml" value="0.22780797101449277" />
+        <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_exercises.xml" value="0.17314814814814813" />
+        <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/activity_meal_plan.xml" value="0.15555555555555556" />
+        <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/rv_exercises.xml" value="0.17314814814814813" />
+        <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/rv_meal_plan.xml" value="0.17314814814814813" />
+        <entry key="..\:/University/SMD-project/LoseItFitnessApp/app/src/main/res/layout/rv_notification.xml" value="0.17314814814814813" />
         <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/drawable/bottommenu_bg.xml" value="0.1725" />
         <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/drawable/splashscreenbg.xml" value="0.1505" />
-        <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_app_settings.xml" value="0.19837537409149208" />
         <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_category.xml" value="0.2394185549380077" />
         <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_dashboard.xml" value="0.19837537409149208" />
-        <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_edit_profile.xml" value="0.2" />
-        <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_excercise.xml" value="0.2" />
+        <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_edit_profile.xml" value="0.2394185549380077" />
+        <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_excercise.xml" value="0.2394185549380077" />
         <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_exercise_details.xml" value="0.19837537409149208" />
         <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_exercises.xml" value="0.19837537409149208" />
         <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_favorite_meal.xml" value="0.19837537409149208" />
@@ -23,11 +33,10 @@
         <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_getstarted.xml" value="0.2" />
         <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_goal.xml" value="0.19837537409149208" />
         <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_height.xml" value="0.2394185549380077" />
-        <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_home_screen.xml" value="0.12" />
+        <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_home_screen.xml" value="0.19837537409149208" />
         <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_level.xml" value="0.19837537409149208" />
         <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_login_screen.xml" value="0.264" />
         <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_profile.xml" value="0.2" />
         <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_sign_up_screen.xml" value="0.264" />
         <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_weight.xml" value="0.2394185549380077" />
         <entry key="..\:/Users/Sameed Zahoor/AndroidStudioProjects/Loseit_androidapp/app/src/main/res/layout/activity_weightgoal.xml" value="0.2394185549380077" />

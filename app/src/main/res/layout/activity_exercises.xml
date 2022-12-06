@@ -52,7 +52,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/cardio_ex"
-                android:layout_margin="5dp"
+                android:layout_margin="3dp"
                 android:textColor="@color/white"
                 android:layout_marginStart="10dp"
                 android:backgroundTint="@color/black"
@@ -61,7 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/legs"
-                android:layout_margin="5dp"
+                android:layout_margin="3dp"
                 android:textColor="@color/black"
                 android:backgroundTint="#FFBDBCBC"
                 style="?android:attr/buttonBarButtonStyle" />
@@ -70,7 +70,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/back"
-                android:layout_margin="5dp"
+                android:layout_margin="3dp"
                 android:textColor="@color/black"
                 android:backgroundTint="#FFBDBCBC"
                 style="?android:attr/buttonBarButtonStyle" />
@@ -79,7 +79,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/chest"
-                android:layout_margin="5dp"
+                android:layout_margin="3dp"
                 android:textColor="@color/black"
                 android:backgroundTint="#FFBDBCBC"
                 style="?android:attr/buttonBarButtonStyle" />

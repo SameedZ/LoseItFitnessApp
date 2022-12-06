@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/meal_bg"
+            android:id="@+id/mealBg"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mealBg"
+            android:text="@string/green_beans_tomatoes_eggs"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:id="@+id/mealTitle"
+            android:layout_marginStart="25dp"
+            android:padding="5dp"
+            android:textStyle="bold"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mealTitle"
+            android:id="@+id/timeCalBanner"
+            android:layout_marginStart="12dp"
+            >
+            <ImageView
+                android:id="@+id/calorieBurnLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/logo_calories_burn" />
+
+            <TextView
+                android:id="@+id/calories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_toEndOf="@id/calorieBurnLogo"
+                android:fontFamily="@font/dmsans_medium"
+                android:text="@string/_110_kcal"
+                android:textColor="#3A4750"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/breakLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:fontFamily="@font/dmsans_medium"
+                android:textSize="11sp"
+                android:layout_toEndOf="@id/calories"
+                android:text="@string/differ" />
+
+            <ImageView
+                android:id="@+id/clockLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/clock_icon"
+                android:layout_toEndOf="@id/breakLine"
+                android:layout_marginStart="15dp"
+                />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_toEndOf="@id/clockLogo"
+                android:fontFamily="@font/dmsans_medium"
+                android:textColor="#3A4750"
+                android:text="@string/_10_min"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:padding="5dp"
+            android:background="#D1D4D6"
+            android:layout_below="@+id/timeCalBanner"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
