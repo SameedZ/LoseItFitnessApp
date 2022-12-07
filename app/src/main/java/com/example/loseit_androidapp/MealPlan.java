@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -27,6 +28,7 @@ public class MealPlan extends AppCompatActivity {
     Uri imageUri;
     ImageView iv_addmeal,iv_backarrow;
     ArrayList<MyMeals> arrayList;
+    TextView mealCount;
     FirebaseAuth mAuth;
     FirebaseUser mUser;
 
@@ -39,6 +41,7 @@ public class MealPlan extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
         arrayList = new ArrayList<>();
+        mealCount = findViewById(R.id.mealCount);
 
 
         iv_backarrow.setOnClickListener(new View.OnClickListener() {
@@ -84,17 +87,17 @@ public class MealPlan extends AppCompatActivity {
                     MyMeals temp = new MyMeals(
                             R.drawable.meal_bg,
                             ds.child("type").getValue().toString(),
-                            ds.child("calories").getValue().toString(),
+                            ds.child("calories").getValue().toString() + " kcal",
                             ds.child("description").getValue().toString()
                     );
 
                     Log.i("children", "meal description: " + ds.child("description").getValue().toString());
 
                     arrayList.add(temp);
-                    MealPlanAdapter mealPlanAdapter = new MealPlanAdapter(arrayList, MealPlan.this);
-                    recyclerView.setAdapter(mealPlanAdapter);
-
                 }
+                mealCount.setText(new StringBuilder().append(arrayList.size()).append(" Meals").toString());
+                MealPlanAdapter mealPlanAdapter = new MealPlanAdapter(arrayList, MealPlan.this);
+                recyclerView.setAdapter(mealPlanAdapter);
 
             }
 
@@ -102,7 +105,9 @@ public class MealPlan extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
+
         });
+
 
 
     }

@@ -91,8 +91,8 @@ public class Exercises extends AppCompatActivity {
 
                         MyExercises temp = new MyExercises(
                                 exerciseTitle,
-                                calories,
-                                timeDuration,
+                                calories + " kcal",
+                                timeDuration + " min",
                                 catagory,
                                 R.drawable.card2_ex
                         );

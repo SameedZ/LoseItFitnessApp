@@ -16,24 +16,22 @@
             android:src="@drawable/meal_bg"
             android:id="@+id/mealBg"
             android:layout_centerHorizontal="true"/>
+
         <TextView
+            android:id="@+id/mealTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/mealBg"
-            android:text="@string/green_beans_tomatoes_eggs"
-            android:textSize="12sp"
-            android:textColor="@color/black"
-            android:id="@+id/mealTitle"
-            android:layout_marginStart="25dp"
             android:padding="5dp"
-            android:textStyle="bold"
-            />
+            android:text="@string/green_beans_tomatoes_eggs"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/mealTitle"
             android:id="@+id/timeCalBanner"
-            android:layout_marginStart="12dp"
             >
             <ImageView
                 android:id="@+id/calorieBurnLogo"
