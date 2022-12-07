@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -11,13 +12,16 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+
 public class MyExercisesAdapter extends RecyclerView.Adapter<MyExercisesAdapter.ViewHolder> {
 
-    MyExercises[] myExercises;
+//    MyExercises[] myExercises;
     Context context;
+    ArrayList<MyExercises> arrayList;
 
-    public MyExercisesAdapter( MyExercises[] myExercises, Exercises activity) {
-        this.myExercises = myExercises;
+    public MyExercisesAdapter( ArrayList<MyExercises> myExercises, Exercises activity) {
+        this.arrayList = myExercises;
         this.context = activity;
     }
 
@@ -31,20 +35,28 @@ public class MyExercisesAdapter extends RecyclerView.Adapter<MyExercisesAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        final MyExercises myExercisesList = myExercises[position];
-        holder.exerciseName.setText(myExercisesList.getExerciseName());
-        holder.timeDuration.setText(myExercisesList.getTimeDuration());
-        holder.exerciseImage.setImageResource(myExercisesList.getImage());
-        holder.exercisePlan.setText((myExercisesList.getExercisePlan()));
-        holder.calories.setText((myExercisesList.getCalories()));
+//        final MyExercises myExercisesList = myExercises[position];
+//        holder.exerciseName.setText(myExercisesList.getExerciseName());
+//        holder.timeDuration.setText(myExercisesList.getTimeDuration());
+//        holder.exerciseImage.setImageResource(myExercisesList.getImage());
+//        holder.exercisePlan.setText((myExercisesList.getExercisePlan()));
+//        holder.calories.setText((myExercisesList.getCalories()));
+//
+//        holder.itemView.setOnClickListener(view ->
+//                Toast.makeText(context, myExercisesList.getExerciseName(), Toast.LENGTH_SHORT).show());
 
-        holder.itemView.setOnClickListener(view ->
-                Toast.makeText(context, myExercisesList.getExerciseName(), Toast.LENGTH_SHORT).show());
+        MyExercises exercises = arrayList.get(position);
+        holder.exerciseName.setText(exercises.getExerciseName());
+        holder.timeDuration.setText(exercises.getTimeDuration());
+        holder.exerciseImage.setImageResource(exercises.getImage());
+        holder.exercisePlan.setText((exercises.getExercisePlan()));
+        holder.calories.setText((exercises.getCalories()));
+
     }
 
     @Override
     public int getItemCount() {
-        return myExercises.length;
+        return arrayList.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {

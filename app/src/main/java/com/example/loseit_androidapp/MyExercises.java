@@ -1,6 +1,5 @@
 package com.example.loseit_androidapp;
 
-import android.net.Uri;
 
 public class MyExercises {
     private String exerciseName;
@@ -9,6 +8,7 @@ public class MyExercises {
     private String timeDuration;
     private String exercisePlan;
     private Integer image;
+
 
     public MyExercises() {
 

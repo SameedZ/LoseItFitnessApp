@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -21,6 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Exercises extends AppCompatActivity {
     Button addExcerciseBtn;
@@ -29,7 +31,8 @@ public class Exercises extends AppCompatActivity {
     FirebaseAuth mAuth;
     FirebaseUser mUser;
 
-
+    MyExercises[] myExercises;
+    ArrayList<MyExercises> arrayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,9 +41,8 @@ public class Exercises extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
-
-        populateUserAllExcercises();
-
+        arrayList = new ArrayList<>();
+//        populateUserAllExcercises();
 
 
         backArrow = findViewById(R.id.backArrow);
@@ -64,95 +66,43 @@ public class Exercises extends AppCompatActivity {
         });
 
 
-                RecyclerView recyclerView = findViewById(R.id.rv_exercises);
+        RecyclerView recyclerView = findViewById(R.id.rv_exercises);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        MyExercises[] myExercises = new MyExercises[] {
-                new MyExercises(
-                        "Exercise with jumping rope",
-                        "10 kcal",
-                        "20 min",
-                        "Beginner",
-                        R.drawable.card2_ex
-                ),
-                new MyExercises(
-                        "Jumping jacks",
-                        "10 kcal",
-                        "10 min",
-                        "Beginner",
-                        R.drawable.card1_ex
-                ),new MyExercises(
-                        "Jumping jacks",
-                        "10 kcal",
-                        "10 min",
-                        "Beginner",
-                        R.drawable.card1_ex
-                ),new MyExercises(
-                        "Jumping jacks",
-                        "10 kcal",
-                        "10 min",
-                        "Beginner",
-                        R.drawable.card1_ex
-                ),new MyExercises(
-                        "Jumping jacks",
-                        "10 kcal",
-                        "10 min",
-                        "Beginner",
-                        R.drawable.card1_ex
-                ),new MyExercises(
-                        "Jumping jacks",
-                        "10 kcal",
-                        "10 min",
-                        "Beginner",
-                        R.drawable.card1_ex
-                ),new MyExercises(
-                        "Jumping jacks",
-                        "10 kcal",
-                        "10 min",
-                        "Beginner",
-                        R.drawable.card1_ex
-                ),
-                new MyExercises(
-                        "Squats",
-                        "10 kcal",
-                        "5 min",
-                        "Beginner",
-                        R.drawable.card2_ex
-                )
-        };
-
-        MyExercisesAdapter myExercisesAdapter = new MyExercisesAdapter(myExercises, Exercises.this);
-        recyclerView.setAdapter(myExercisesAdapter);
-    }
-
-    private void populateUserAllExcercises() {
-
-        // create a java string list
-        ArrayList<String> listexcerciseid = new ArrayList<>();
-
-        Toast.makeText(Exercises.this, "populateUserAllExcercises", Toast.LENGTH_SHORT).show();
-        // get a reference to UserExcercises
         DatabaseReference userExcercisesRef = FirebaseDatabase.getInstance().getReference("UserExcercises");
         // UserExcercises -> Excercise ID -> User ID
         userExcercisesRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot ds : snapshot.getChildren()) {
-                    String excerciseID = ds.getKey();
-                    Toast.makeText(Exercises.this, excerciseID, Toast.LENGTH_SHORT).show();
-                    // each excerciseID contains a userid key and a value against it. check if our current user id matches userid value
-                    if (ds.child(mUser.getUid()).exists()) {
-                        // if it matches, add the excercise id to the list
-                        // also toast the excercise id
+//                    String excerciseID = ds.getKey();
+//                    Toast.makeText(Exercises.this, excerciseID, Toast.LENGTH_SHORT).show();
 
+                    String userLodgedIn = mUser.getUid();
+                    String currentuser = ds.child("userid").getValue().toString();
+                    if(userLodgedIn.equals(currentuser)) {
+//                        Toast.makeText(Exercises.this, "hi", Toast.LENGTH_SHORT).show();
 
-                        //ds.child("caloriesburnt").getValue();
-                        Toast.makeText(Exercises.this, excerciseID+"found", Toast.LENGTH_SHORT).show();
-                        listexcerciseid.add(excerciseID);
+                        String exerciseTitle = ds.child("exercisename").getValue().toString();
+                        String calories = ds.child("caloriesburnt").getValue().toString();
+                        String timeDuration = ds.child("duration").getValue().toString();
+                        String catagory = ds.child("category").getValue().toString();
+
+                        MyExercises temp = new MyExercises(
+                                exerciseTitle,
+                                calories,
+                                timeDuration,
+                                catagory,
+                                R.drawable.card2_ex
+                        );
+                        arrayList.add(temp);
+                        Log.i("children", "response: " + temp.getExerciseName());
+
                     }
-                    // add the excercise ID to the list
-                    listexcerciseid.add(excerciseID);
+                    MyExercisesAdapter myExercisesAdapter = new MyExercisesAdapter(arrayList, Exercises.this);
+                    recyclerView.setAdapter(myExercisesAdapter);
+
                 }
             }
 
@@ -163,12 +113,7 @@ public class Exercises extends AppCompatActivity {
         });
 
 
-
-
-
-
-
-
+//        myExercises = arrayList.toArray(new MyExercises[0]);
 
 
     }
