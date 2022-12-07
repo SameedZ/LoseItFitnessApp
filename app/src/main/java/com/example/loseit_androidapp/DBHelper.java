@@ -21,20 +21,20 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase DB) {
-        DB.execSQL("CREATE TABLE Meals(userID TEXT primary key, type TEXT, calories TEXT, description TEXT)");
-
+        DB.execSQL("CREATE TABLE Meals(userID TEXT, mealName TEXT,type TEXT, calories TEXT, description TEXT)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase DB, int i, int i1) {
-        DB.execSQL("DROP TABLE IF EXISTS MEALS");
+        DB.execSQL("DROP TABLE IF EXISTS Meals");
     }
 
     // INSERTION:
-    public boolean insertNewMeal(String userID, String type, String calories, String description) {
+    public boolean insertNewMeal(String userID, String type, String mealName, String calories, String description) {
         SQLiteDatabase DB = this.getReadableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("userID", userID);
+        contentValues.put("mealName", mealName);
         contentValues.put("type", type);
         contentValues.put("calories", calories);
         contentValues.put("description", description);

@@ -83,19 +83,30 @@ public class MealPlan extends AppCompatActivity {
                 for (DataSnapshot ds : snapshot.getChildren()) {
 
                     Log.i("children", "response: " + ds.getValue());
+                    String userLodgedIn = mUser.getUid();
+                    String currentuser = ds.child("userid").getValue() + "";
+                    if(userLodgedIn.equals(currentuser)) {
 
-                    MyMeals temp = new MyMeals(
-                            R.drawable.meal_bg,
-                            ds.child("type").getValue().toString(),
-                            ds.child("calories").getValue().toString() + " kcal",
-                            ds.child("description").getValue().toString()
-                    );
+                        String mealTitle = ds.child("name").getValue() + ". ";
+                        String calories = ds.child("calories").getValue() + ".0";
+                        String timeDuration = ds.child("type").getValue() + ". ";
 
-                    Log.i("children", "meal description: " + ds.child("description").getValue().toString());
 
-                    arrayList.add(temp);
+                        MyMeals temp = new MyMeals(
+                                R.drawable.meal_bg,
+                                timeDuration + ".",
+                                calories + " kcal",
+                                mealTitle
+                        );
+
+//                    Log.i("children", "meal description: " + ds.child("description").getValue().toString());
+
+                        arrayList.add(temp);
+
+                    }
+
                 }
-                mealCount.setText(new StringBuilder().append(arrayList.size()).append(" Meals").toString());
+                mealCount.setText(arrayList.size() + " Meals");
                 MealPlanAdapter mealPlanAdapter = new MealPlanAdapter(arrayList, MealPlan.this);
                 recyclerView.setAdapter(mealPlanAdapter);
 

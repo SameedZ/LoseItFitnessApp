@@ -97,7 +97,7 @@ public class Exercises extends AppCompatActivity {
                                 R.drawable.card2_ex
                         );
                         arrayList.add(temp);
-                        Log.i("children", "response: " + temp.getExerciseName());
+//                        Log.i("children", "response: " + temp.getExerciseName());
 
                     }
                     MyExercisesAdapter myExercisesAdapter = new MyExercisesAdapter(arrayList, Exercises.this);

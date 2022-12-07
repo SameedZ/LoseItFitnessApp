@@ -1,10 +1,13 @@
 package com.example.loseit_androidapp;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.media.Image;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,6 +26,7 @@ public class AddExercise extends AppCompatActivity {
 
     FirebaseAuth mAuth;
     FirebaseUser mUser;
+    ExerciseHelper DB;
 
     Button btn_add;
 
@@ -43,6 +47,9 @@ public class AddExercise extends AppCompatActivity {
         et_category = findViewById(R.id.et_category);
         et_description = findViewById(R.id.et_description);
 
+        // SQLite DB
+        DB = new ExerciseHelper(this);
+
         // set all buttons to their respective ids
         btn_add = findViewById(R.id.btn_add);
 
@@ -50,12 +57,39 @@ public class AddExercise extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 savedatatofirebase();
+                boolean insertMealData = DB.insertNewExercise(mUser.getUid(),
+                        et_exercisename.getText().toString(),
+                        et_duration.getText().toString(),
+                        et_caloriesburnt.getText().toString(),
+                        et_category.getText().toString(),
+                        et_description.getText().toString()
+                        );
+                if(insertMealData == true) {
+                    Log.i("sql", "sql insertion: "+ et_exercisename.getText().toString());
+                    Toast.makeText(AddExercise.this, et_exercisename.getText().toString()
+                            + " Added Successfully.", Toast.LENGTH_SHORT).show();
+                    Cursor res = DB.getExercises();
+                    if(res.getCount() > 0) {
+                        StringBuffer stringBuffer = new StringBuffer();
+                        while (res.moveToNext()) {
+                            stringBuffer.append("Exercise: " + res.getString(1));
+                        }
+                        AlertDialog.Builder builder = new AlertDialog.Builder(AddExercise.this);
+                        builder.setCancelable(true);
+                        builder.setTitle("Exercise Added");
+                        builder.setMessage(stringBuffer.toString());
+                        builder.show();
+                    }
+
+
+                } else {
+                    Toast.makeText(AddExercise.this, "Error in Adding meal.", Toast.LENGTH_SHORT).show();
+                }
+
+
+
             }
         });
-
-
-
-
 
         iv_backarrow = findViewById(R.id.iv_backarrow);
         iv_backarrow.setOnClickListener(new View.OnClickListener() {

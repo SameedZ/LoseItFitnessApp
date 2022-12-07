@@ -23,6 +23,7 @@ public class AddMeal extends AppCompatActivity {
     ImageView iv_backarrow;
     FirebaseAuth mAuth;
     FirebaseUser mUser;
+//    DBHelper DB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,12 +43,28 @@ public class AddMeal extends AppCompatActivity {
         iv_backarrow = findViewById(R.id.iv_backarrow);
 
 
+        // SQLite
+//        DB = new DBHelper(this);
+
         // set onclick listener for btn_add
         btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 savedatatofirebase();
 
+                // INSERTING DATA IN SQLite
+//                boolean insertMealData = DB.insertNewMeal(mUser.getUid(),
+//                        et_type.getText().toString(),
+//                        et_mealname.getText().toString(),
+//                        et_calories.getText().toString(),
+//                        et_description.getText().toString()
+//                        );
+//                if(insertMealData == true) {
+//                    Toast.makeText(AddMeal.this, et_mealname.getText().toString()
+//                            + " Added Successfully.", Toast.LENGTH_SHORT).show();
+//                } else {
+//                    Toast.makeText(AddMeal.this, "Error in Adding meal.", Toast.LENGTH_SHORT).show();
+//                }
             }
         });
 
@@ -108,7 +125,7 @@ public class AddMeal extends AppCompatActivity {
             databaseReference.child(mUser.getUid()+date).child("category").setValue(et_category.getText().toString());
 
             // show a toast that the meal has been added
-            Toast.makeText(this, "Meal added", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "Meal added", Toast.LENGTH_SHORT).show();
 
 
 
