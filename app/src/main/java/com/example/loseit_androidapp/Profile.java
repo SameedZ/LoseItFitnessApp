@@ -42,6 +42,9 @@ public class Profile extends AppCompatActivity {
     FirebaseUser mUser;
     FirebaseStorage firebaseStorage;
     Uri imageUri;
+    TextView tv_logout;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +55,18 @@ public class Profile extends AppCompatActivity {
         tv_name = findViewById(R.id.tv_name);
         tv_height = findViewById(R.id.tv_height);
         tv_age = findViewById(R.id.tv_age);
+        tv_logout = findViewById(R.id.tv_logout);
         profileImage = findViewById(R.id.avatarpic);
+
+        tv_logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(Profile.this,LoginScreen.class));
+                finish();
+            }
+        });
+
 
         tv_weight.setText("N");
         tv_name.setText("User Name");
@@ -64,14 +78,14 @@ public class Profile extends AppCompatActivity {
         firebaseStorage = FirebaseStorage.getInstance();
 
         // check if the mUser is logged in or not
-//        if(mUser == null){
-//            startActivity(new Intent(Profile.this,LoginScreen.class));
-//            finish();
-//        }  else {
-//            // get the mUser details from firebase realtime database
-//            // and set the details to the text views
-//            getandpopulateuserdetails();
-//        }
+        if(mUser == null){
+            startActivity(new Intent(Profile.this,LoginScreen.class));
+            finish();
+        }  else {
+            // get the mUser details from firebase realtime database
+            // and set the details to the text views
+            getandpopulateuserdetails();
+        }
 
 
         iv_backarrow = findViewById(R.id.iv_backarrow);
