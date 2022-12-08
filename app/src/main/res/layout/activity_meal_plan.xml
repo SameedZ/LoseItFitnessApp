@@ -95,13 +95,15 @@
                 android:id="@+id/waterText"
                 android:textStyle="bold"
                 />
+
             <ImageView
+                android:id="@+id/iv_watertracker"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/water_intake_btn"
                 android:layout_below="@+id/waterText"
                 android:layout_centerInParent="true"
-                android:contentDescription="btn" />
+                android:contentDescription="btn"
+                android:src="@drawable/water_intake_btn" />
         </RelativeLayout>
 
         <!--    Category Search    -->

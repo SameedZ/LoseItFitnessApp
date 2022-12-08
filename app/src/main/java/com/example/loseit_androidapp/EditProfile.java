@@ -51,6 +51,7 @@ public class EditProfile extends AppCompatActivity {
         iv_backarrow = findViewById(R.id.iv_backarrow);
         iv_editprofile =findViewById(R.id.iv_editprofile);
         et_email = findViewById(R.id.et_emailaddress);
+
         et_name = findViewById(R.id.et_fullname);
         et_age = findViewById(R.id.et_age);
         et_gender = findViewById(R.id.et_gender);
@@ -71,6 +72,7 @@ public class EditProfile extends AppCompatActivity {
             // get the mUser details from firebase realtime database
             // and set the details to the edit text fields
             getandpopulateuserdetails();
+            et_email.setText(mUser.getEmail());
         }
 
 

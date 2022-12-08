@@ -25,8 +25,11 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class MealPlan extends AppCompatActivity {
+
+
+
     Uri imageUri;
-    ImageView iv_addmeal,iv_backarrow;
+    ImageView iv_addmeal,iv_backarrow,iv_watertracker;
     ArrayList<MyMeals> arrayList;
     TextView mealCount;
     FirebaseAuth mAuth;
@@ -48,6 +51,15 @@ public class MealPlan extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MealPlan.this, HomeScreen.class);
+                startActivity(intent);
+            }
+        });
+
+        iv_watertracker = findViewById(R.id.iv_watertracker);
+        iv_watertracker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MealPlan.this, WaterTracker.class);
                 startActivity(intent);
             }
         });

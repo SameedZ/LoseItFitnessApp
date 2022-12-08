@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class Exercises extends AppCompatActivity {
-    Button addExcerciseBtn;
+    Button addExcerciseBtn,btn_walktracker;
     ImageView backArrow;
 
     FirebaseAuth mAuth;
@@ -54,6 +54,14 @@ public class Exercises extends AppCompatActivity {
             }
         });
 
+        btn_walktracker = findViewById(R.id.btn_walktracker);
+        btn_walktracker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Exercises.this, Walking.class);
+                startActivity(intent);
+            }
+        });
 
         addExcerciseBtn = findViewById(R.id.addExcerciseBtn);
         addExcerciseBtn.setOnClickListener(new View.OnClickListener() {
