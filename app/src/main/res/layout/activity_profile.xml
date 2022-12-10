@@ -36,7 +36,11 @@
             android:textColor="#000000"
             android:textSize="30dp"
 
+
             />
+
+
+
 
         <ImageView
             android:id="@+id/iv_editprofile"
@@ -45,6 +49,19 @@
             android:layout_marginTop="40dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/editbtn" />
+
+        <TextView
+            android:id="@+id/tv_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/bebasneue_regular"
+            android:text="Logout"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+
 
     </LinearLayout>
 

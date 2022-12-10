@@ -62,17 +62,39 @@
             android:textColor="@color/black"
             android:textStyle="bold" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/addExcerciseBtn"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:gravity="center"
+            android:layout_below="@id/mealText"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/mealText"
-            android:background="#B0C929"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:text="Add My Excercise"
-            android:textColor="#FFFFFF" />
 
+            >
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/addExcerciseBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mealText"
+                android:background="#B0C929"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Add My Excercise"
+                android:layout_margin="15dp"
+                android:textColor="#FFFFFF" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_walktracker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mealText"
+                android:background="#B0C929"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Walk Tracker"
+                android:textColor="#FFFFFF"
+                android:layout_margin="15dp"
+                />
+        </LinearLayout>
 
     </RelativeLayout>
 

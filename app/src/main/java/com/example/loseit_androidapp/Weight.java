@@ -25,6 +25,7 @@ public class Weight extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weight);
+
         et_weight = findViewById(R.id.et_weight);
         btn_next = findViewById(R.id.btn_next);
 

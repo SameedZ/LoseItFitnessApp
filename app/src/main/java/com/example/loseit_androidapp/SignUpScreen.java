@@ -23,6 +23,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
@@ -55,78 +56,13 @@ public class SignUpScreen extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
         
-
         btn_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Signup();
+                SignupProcess();
             }
-
-            private void Signup() {
-                String email = et_email.getText().toString().trim();
-                String password = et_password.getText().toString().trim();
-
-                    mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                                  if (task.isSuccessful()){
-                                      Toast.makeText(SignUpScreen.this, "Sign Up Complete.", Toast.LENGTH_SHORT).show();
-
-                                      FirebaseDatabase.getInstance().getReference().child("Users").child(mUser.getUid()).child("email").setValue(email);
-                                      FirebaseDatabase.getInstance().getReference().child("Users").child(mUser.getUid()).child("password").setValue(password);
-
-                                        Intent intent = new Intent(SignUpScreen.this,Weight.class);
-                                      startActivity(intent);
-                                      finish();
-                                  } else {
-                                      Toast.makeText(SignUpScreen.this, "err"+task.getException() , Toast.LENGTH_SHORT).show();
-                                  }
-                        }
-
-                        private void SendUserInfoToWebServer() {
-                            // call to action on the login button
-                            String email = et_email.getText().toString().trim();
-                            String password = et_password.getText().toString().trim();
-
-                            StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
-                                @Override
-                                public void onResponse(String response) {
-                                    Toast.makeText(SignUpScreen.this, response , Toast.LENGTH_SHORT).show();
-                                }
-                            }, new Response.ErrorListener() {
-                                @Override
-                                public void onErrorResponse (VolleyError error){
-                                    Toast.makeText(SignUpScreen.this, ""+error.getMessage(), Toast.LENGTH_SHORT).show();
-                                }
-                            }
-
-                            )  {
-                                @Nullable
-                                @Override
-                                protected Map<String, String> getParams() throws AuthFailureError {
-                                    Map<String,String> params = new HashMap<String,String>();
-
-                                    params.put("email",email);
-                                    params.put("password",password);
-                                    return params;
-                                }
-                            };
-
-                            RequestQueue rq = Volley.newRequestQueue(SignUpScreen.this);
-                            rq.add(request);
-
-                        }
-
-
-                    });
-
-
-
-
-            }
-
-
         });
+
 
 
 
@@ -134,6 +70,33 @@ public class SignUpScreen extends AppCompatActivity {
 
 
 
+    private void SignupProcess() {
+        String email = et_email.getText().toString().trim();
+        String password = et_password.getText().toString().trim();
+        boolean isValid = false;
+
+        mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()){
+                    Toast.makeText(SignUpScreen.this, "Sign Up Complete.", Toast.LENGTH_SHORT).show();
+
+                    Intent intent = new Intent(SignUpScreen.this,Weight.class);
+                    startActivity(intent);
+                    finish();
+
+                } else {
+                    Toast.makeText(SignUpScreen.this, "err"+task.getException() , Toast.LENGTH_SHORT).show();
+                }
+            }
+
+        });
+
+
+
+
+
+    }
 
 
 
