@@ -22,17 +22,24 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.Objects;
 
 public class Exercises extends AppCompatActivity {
     Button addExcerciseBtn;
     ImageView backArrow;
+    Button allExercisesBtn;
+    Button legsBtn;
+    Button backBtn;
+    Button chestBtn;
 
     FirebaseAuth mAuth;
     FirebaseUser mUser;
 
-    MyExercises[] myExercises;
     ArrayList<MyExercises> arrayList;
+    ArrayList<MyExercises> legsExercises;
+    ArrayList<MyExercises> chestExercises;
+    ArrayList<MyExercises> backExercises;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +49,16 @@ public class Exercises extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
         arrayList = new ArrayList<>();
-//        populateUserAllExcercises();
+        legsExercises = new ArrayList<>();
+        chestExercises = new ArrayList<>();
+        backExercises = new ArrayList<>();
+        legsBtn = findViewById(R.id.legsBtn);
+        chestBtn = findViewById(R.id.chestBtn);
+        backBtn = findViewById(R.id.backBtn);
+        allExercisesBtn = findViewById(R.id.allEx);
+
+
+        String userLodgedIn = mUser.getUid();
 
 
         backArrow = findViewById(R.id.backArrow);
@@ -84,10 +100,10 @@ public class Exercises extends AppCompatActivity {
                     if(userLodgedIn.equals(currentuser)) {
 //                        Toast.makeText(Exercises.this, "hi", Toast.LENGTH_SHORT).show();
 
-                        String exerciseTitle = ds.child("exercisename").getValue().toString();
-                        String calories = ds.child("caloriesburnt").getValue().toString();
-                        String timeDuration = ds.child("duration").getValue().toString();
-                        String catagory = ds.child("category").getValue().toString();
+                        String exerciseTitle = Objects.requireNonNull(ds.child("exercisename").getValue()).toString();
+                        String calories = Objects.requireNonNull(ds.child("caloriesburnt").getValue()).toString();
+                        String timeDuration = Objects.requireNonNull(ds.child("duration").getValue()).toString();
+                        String catagory = Objects.requireNonNull(ds.child("category").getValue()).toString();
 
                         MyExercises temp = new MyExercises(
                                 exerciseTitle,
@@ -105,15 +121,158 @@ public class Exercises extends AppCompatActivity {
 
                 }
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
         });
 
+        legsBtn.setOnClickListener(view -> {
+            userExcercisesRef.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    for (DataSnapshot ds : snapshot.getChildren()) {
+                        String currentuser = Objects.requireNonNull(ds.child("userid").getValue()).toString();
+                        if(userLodgedIn.equals(currentuser)) {
+                            String exerciseTitle = Objects.requireNonNull(ds.child("exercisename").getValue()).toString();
+                            String calories = Objects.requireNonNull(ds.child("caloriesburnt").getValue()).toString();
+                            String timeDuration = Objects.requireNonNull(ds.child("duration").getValue()).toString();
+                            String catagory = Objects.requireNonNull(ds.child("category").getValue()).toString();
 
-//        myExercises = arrayList.toArray(new MyExercises[0]);
+                            if(Objects.requireNonNull(ds.child("category").getValue()).toString()
+                                    .toLowerCase(Locale.ROOT).equals("legs")) {
+
+                                MyExercises temp = new MyExercises(
+                                        exerciseTitle,
+                                        calories + " kcal",
+                                        timeDuration + " min",
+                                        catagory,
+                                        R.drawable.card2_ex
+                                );
+//                                Log.i("ex-", "i-th exercise: " + temp.getExercisePlan());
+                                legsExercises.add(temp);
+
+                            }
+                        }
+
+                    }
+                    if(legsExercises.size() == 0) {
+                        Toast.makeText(Exercises.this, "No Exercise Found.", Toast.LENGTH_SHORT).show();
+                    }
+                    MyExercisesAdapter myExercisesAdapter = new MyExercisesAdapter(legsExercises, Exercises.this);
+                    recyclerView.setAdapter(myExercisesAdapter);
+
+//
+                }
+
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+
+            });
+            legsExercises.clear();
+        });
+
+        chestBtn.setOnClickListener(view -> {
+            userExcercisesRef.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    for (DataSnapshot ds : snapshot.getChildren()) {
+                        String currentuser = Objects.requireNonNull(ds.child("userid").getValue()).toString();
+                        if(userLodgedIn.equals(currentuser)) {
+                            String exerciseTitle = Objects.requireNonNull(ds.child("exercisename").getValue()).toString();
+                            String calories = Objects.requireNonNull(ds.child("caloriesburnt").getValue()).toString();
+                            String timeDuration = Objects.requireNonNull(ds.child("duration").getValue()).toString();
+                            String catagory = Objects.requireNonNull(ds.child("category").getValue()).toString();
+
+                            if(Objects.requireNonNull(ds.child("category").getValue()).toString()
+                                    .toLowerCase(Locale.ROOT).equals("chest")) {
+
+                                MyExercises temp = new MyExercises(
+                                        exerciseTitle,
+                                        calories + " kcal",
+                                        timeDuration + " min",
+                                        catagory,
+                                        R.drawable.card2_ex
+                                );
+//                                Log.i("ex-", "i-th exercise: " + temp.getExercisePlan());
+                                chestExercises.add(temp);
+
+                            }
+                        }
+
+                    }
+                    if(chestExercises.size() < 1) {
+                        Toast.makeText(Exercises.this, "No Exercise Found.", Toast.LENGTH_SHORT).show();
+                    } else {
+                        MyExercisesAdapter myExercisesAdapter = new MyExercisesAdapter(chestExercises, Exercises.this);
+                        recyclerView.setAdapter(myExercisesAdapter);
+                    }
+//
+                }
+
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+
+            });
+            chestExercises.clear();
+        });
+
+        backBtn.setOnClickListener(view -> {
+            userExcercisesRef.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    for (DataSnapshot ds : snapshot.getChildren()) {
+                        String currentuser = Objects.requireNonNull(ds.child("userid").getValue()).toString();
+                        if(userLodgedIn.equals(currentuser)) {
+                            String exerciseTitle = Objects.requireNonNull(ds.child("exercisename").getValue()).toString();
+                            String calories = Objects.requireNonNull(ds.child("caloriesburnt").getValue()).toString();
+                            String timeDuration = Objects.requireNonNull(ds.child("duration").getValue()).toString();
+                            String catagory = Objects.requireNonNull(ds.child("category").getValue()).toString();
+
+                            if(Objects.requireNonNull(ds.child("category").getValue()).toString()
+                                    .toLowerCase(Locale.ROOT).equals("back")) {
+
+                                MyExercises temp = new MyExercises(
+                                        exerciseTitle,
+                                        calories + " kcal",
+                                        timeDuration + " min",
+                                        catagory,
+                                        R.drawable.card2_ex
+                                );
+//                                Log.i("ex-", "i-th exercise: " + temp.getExercisePlan());
+                                backExercises.add(temp);
+
+                            }
+                        }
+
+                    }
+                    if(backExercises.size() < 1) {
+                        Toast.makeText(Exercises.this, "No Exercise Found.", Toast.LENGTH_SHORT).show();
+                    }
+                    MyExercisesAdapter myExercisesAdapter = new MyExercisesAdapter(backExercises, Exercises.this);
+                    recyclerView.setAdapter(myExercisesAdapter);
+                }
+
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+
+            });
+            backExercises.clear();
+        });
+
+        allExercisesBtn.setOnClickListener(view -> {
+            MyExercisesAdapter myExercisesAdapter = new MyExercisesAdapter(arrayList, Exercises.this);
+            recyclerView.setAdapter(myExercisesAdapter);
+        });
 
 
     }

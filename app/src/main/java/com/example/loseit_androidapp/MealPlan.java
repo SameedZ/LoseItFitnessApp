@@ -23,11 +23,16 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class MealPlan extends AppCompatActivity {
     Uri imageUri;
     ImageView iv_addmeal,iv_backarrow;
+    ImageView breakFastBtn, lunchBtn, dinnerBtn;
     ArrayList<MyMeals> arrayList;
+    ArrayList<MyMeals> breakFast;
+    ArrayList<MyMeals> lunch;
+    ArrayList<MyMeals> dinner;
     TextView mealCount;
     FirebaseAuth mAuth;
     FirebaseUser mUser;
@@ -40,8 +45,16 @@ public class MealPlan extends AppCompatActivity {
         iv_backarrow = findViewById(R.id.backArrow);
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
+
         arrayList = new ArrayList<>();
+        breakFast = new ArrayList<>();
+        lunch = new ArrayList<>();
+        dinner = new ArrayList<>();
+
         mealCount = findViewById(R.id.mealCount);
+        breakFastBtn = findViewById(R.id.btnBreakFast);
+        lunchBtn = findViewById(R.id.btnLunch);
+        dinnerBtn = findViewById(R.id.btnDinner);
 
 
         iv_backarrow.setOnClickListener(new View.OnClickListener() {
@@ -66,16 +79,6 @@ public class MealPlan extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-//        MyMeals temp = new MyMeals(
-//                R.drawable.meal_bg,
-//                "Breakfast",
-//                "20 kcal",
-//                "Khaoo bas."
-//        );
-//        arrayList.add(temp);
-
-
-
         DatabaseReference userExcercisesRef = FirebaseDatabase.getInstance().getReference("UserMeals");
         userExcercisesRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -98,9 +101,6 @@ public class MealPlan extends AppCompatActivity {
                                 calories + " kcal",
                                 mealTitle
                         );
-
-//                    Log.i("children", "meal description: " + ds.child("description").getValue().toString());
-
                         arrayList.add(temp);
 
                     }
@@ -109,7 +109,6 @@ public class MealPlan extends AppCompatActivity {
                 mealCount.setText(arrayList.size() + " Meals");
                 MealPlanAdapter mealPlanAdapter = new MealPlanAdapter(arrayList, MealPlan.this);
                 recyclerView.setAdapter(mealPlanAdapter);
-
             }
 
             @Override
@@ -117,6 +116,136 @@ public class MealPlan extends AppCompatActivity {
 
             }
 
+        });
+
+
+        breakFastBtn.setOnClickListener(view -> {
+            userExcercisesRef.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    for (DataSnapshot ds : snapshot.getChildren()) {
+
+                        Log.i("children", "response: " + ds.getValue());
+                        String userLodgedIn = mUser.getUid();
+                        String currentuser = ds.child("userid").getValue() + "";
+                        if(userLodgedIn.equals(currentuser)) {
+
+                            String mealTitle = ds.child("name").getValue() + ". ";
+                            String calories = ds.child("calories").getValue() + ".0";
+                            String timeDuration = ds.child("type").getValue() + ". ";
+                            if(timeDuration.toLowerCase(Locale.ROOT).equals("breakfast. ")) {
+                                MyMeals temp = new MyMeals(
+                                        R.drawable.meal_bg,
+                                        timeDuration,
+                                        calories + " kcal",
+                                        mealTitle
+                                );
+                                breakFast.add(temp);
+                            }
+
+                        }
+
+                    }
+                    mealCount.setText(breakFast.size() + " Meals");
+                    if(breakFast.size() == 0) {
+                        Toast.makeText(MealPlan.this, "No meal found!", Toast.LENGTH_SHORT).show();
+                    }
+                    MealPlanAdapter mealPlanAdapter = new MealPlanAdapter(breakFast, MealPlan.this);
+                    recyclerView.setAdapter(mealPlanAdapter);
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+
+            });
+        });
+
+        lunchBtn.setOnClickListener(view -> {
+            userExcercisesRef.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    for (DataSnapshot ds : snapshot.getChildren()) {
+
+                        Log.i("children", "response: " + ds.getValue());
+                        String userLodgedIn = mUser.getUid();
+                        String currentuser = ds.child("userid").getValue() + "";
+                        if(userLodgedIn.equals(currentuser)) {
+
+                            String mealTitle = ds.child("name").getValue() + ". ";
+                            String calories = ds.child("calories").getValue() + ".0";
+                            String timeDuration = ds.child("type").getValue() + ". ";
+                            if(timeDuration.toLowerCase(Locale.ROOT).equals("lunch. ")) {
+                                MyMeals temp = new MyMeals(
+                                        R.drawable.meal_bg,
+                                        timeDuration,
+                                        calories + " kcal",
+                                        mealTitle
+                                );
+                                lunch.add(temp);
+                            }
+
+                        }
+
+                    }
+                    mealCount.setText(lunch.size() + " Meals");
+                    if(lunch.size() == 0) {
+                        Toast.makeText(MealPlan.this, "No meal found!", Toast.LENGTH_SHORT).show();
+                    }
+                    MealPlanAdapter mealPlanAdapter = new MealPlanAdapter(lunch, MealPlan.this);
+                    recyclerView.setAdapter(mealPlanAdapter);
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+
+            });
+        });
+
+        dinnerBtn.setOnClickListener(view -> {
+            userExcercisesRef.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    for (DataSnapshot ds : snapshot.getChildren()) {
+
+                        Log.i("children", "response: " + ds.getValue());
+                        String userLodgedIn = mUser.getUid();
+                        String currentuser = ds.child("userid").getValue() + "";
+                        if(userLodgedIn.equals(currentuser)) {
+
+                            String mealTitle = ds.child("name").getValue() + ". ";
+                            String calories = ds.child("calories").getValue() + ".0";
+                            String timeDuration = ds.child("type").getValue() + ". ";
+                            if(timeDuration.toLowerCase(Locale.ROOT).equals("dinner. ")) {
+                                MyMeals temp = new MyMeals(
+                                        R.drawable.meal_bg,
+                                        timeDuration,
+                                        calories + " kcal",
+                                        mealTitle
+                                );
+                                dinner.add(temp);
+                            }
+
+                        }
+
+                    }
+                    mealCount.setText(dinner.size() + " Meals");
+                    if(dinner.size() == 0) {
+                        Toast.makeText(MealPlan.this, "No meal found!", Toast.LENGTH_SHORT).show();
+                    }
+                    MealPlanAdapter mealPlanAdapter = new MealPlanAdapter(dinner, MealPlan.this);
+                    recyclerView.setAdapter(mealPlanAdapter);
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+
+            });
         });
 
 

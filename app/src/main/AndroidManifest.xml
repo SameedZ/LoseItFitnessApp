@@ -19,9 +19,9 @@
         android:theme="@style/Theme.Loseit_androidapp"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-<!--        <activity-->
-<!--            android:name=".MealPlan"-->
-<!--            android:exported="false" />-->
+        <activity
+            android:name=".MealPlan"
+            android:exported="false" />
         <activity
             android:name=".AddExercise"
             android:exported="false" />
@@ -122,7 +122,7 @@
             android:name=".Welcome1Screen"
             android:exported="false" />
         <activity
-            android:name=".MealPlan"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

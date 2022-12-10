@@ -131,18 +131,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/cat_breakfast_btn"
+                    android:id="@+id/btnBreakFast"
                     android:padding="10dp"
                     />
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/lunch_btn"
+                    android:id="@+id/btnLunch"
                     android:padding="10dp"
                     />
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/dinner_btn"
+                    android:id="@+id/btnDinner"
                     android:padding="10dp"
                     />
             </LinearLayout>
