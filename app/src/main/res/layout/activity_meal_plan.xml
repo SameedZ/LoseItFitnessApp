@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MealPlan"
+    android:background="@color/white"
     tools:ignore="ScrollViewCount">
 
 

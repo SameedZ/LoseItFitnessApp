@@ -30,12 +30,11 @@ public class MealPlan extends AppCompatActivity {
 
 
     Uri imageUri;
-<<<<<<< HEAD
     ImageView iv_addmeal,iv_backarrow;
     ImageView breakFastBtn, lunchBtn, dinnerBtn;
-=======
-    ImageView iv_addmeal,iv_backarrow,iv_watertracker;
->>>>>>> 87ecb97d6527c514e4bbbbf4b3398765624b1348
+
+    ImageView iv_watertracker;
+
     ArrayList<MyMeals> arrayList;
     ArrayList<MyMeals> breakFast;
     ArrayList<MyMeals> lunch;

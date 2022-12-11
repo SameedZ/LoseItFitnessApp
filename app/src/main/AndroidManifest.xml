@@ -20,16 +20,10 @@
         android:theme="@style/Theme.Loseit_androidapp"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-<<<<<<< HEAD
-        <activity
-            android:name=".MealPlan"
-            android:exported="false" />
-=======
 
         <!-- <activity -->
         <!-- android:name=".MealPlan" -->
         <!-- android:exported="false" /> -->
->>>>>>> 87ecb97d6527c514e4bbbbf4b3398765624b1348
         <activity
             android:name=".AddExercise"
             android:exported="false" />
@@ -130,8 +124,6 @@
             android:name=".Welcome1Screen"
             android:exported="false" />
         <activity
-<<<<<<< HEAD
-=======
             android:name=".MealPlan"
             android:exported="false" />
         <activity
@@ -144,7 +136,6 @@
 
 
         <activity
->>>>>>> 87ecb97d6527c514e4bbbbf4b3398765624b1348
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
